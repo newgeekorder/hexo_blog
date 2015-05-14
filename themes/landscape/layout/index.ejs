@@ -1,0 +1,945 @@
+layout: false
+---
+<%- partial('_partial/head') %>
+
+<body data-spy="scroll" data-target="#scrollTarget" data-offset="150">
+<!-- Preloader -->
+<div id="preloader">
+    <div id="status">
+        <img src="images/theme-pics/loader.gif" alt=""/>
+
+        <h1 class="noSubtitle">Welcome home</h1>
+    </div>
+</div>
+<!-- Preloader -->
+<!-- Primary Page Layout
+================================================== -->
+<!-- globalWrapper -->
+<div id="globalWrapper" class="localscroll">
+    <!-- header -->
+    <header id="mainHeader" class="navbar-fixed-top" role="banner">
+        <div class="container">
+            <nav class="navbar navbar-default scrollMenu" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target=".navbar-ex1-collapse"><span class="sr-only">Toggle navigation</span> <span
+                                class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/index.html"><img width="180px" src="images/ricstonLogoNew.png"
+                                                                   alt="Ricston Logo"/></a></div>
+                <div class="collapse navbar-collapse navbar-ex1-collapse" id="scrollTarget">
+                    <ul class="nav navbar-nav pull-right">
+                        <li class="active"><a href="#home"><i class="fa fa-home"></i>Home</a></li>
+                        <li class="active"><a href="#news"><i class="fa fa-lightbulb-o"></i>News</a></li>
+                        <li class="active"><a href="#services"><i class="fa fa-thumbs-up"></i>Services</a></li>
+                        <!--<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"-->
+                        <!--aria-expanded="false"><span class="caret"></span></a>-->
+                        <!--<ul class="dropdown-menu" role="menu">-->
+                        <!--<li class="customMenu"><a href="#">Mule Integration</a></li>-->
+                        <!--<li class="customMenu"><a href="#">Open Source</a></li>-->
+                        <!--<li class="customMenu"><a href="#">Java</a></li>-->
+                        <!--<li class="customMenu"><a href="#">Migration</a></li>-->
+                        <!--<li class="customMenu"><a href="#">DevOps</a></li>-->
+                        <!--<li class="customMenu"><a href="#">Testing</a></li>-->
+                        <!--<li class="customMenu"><a href="#">Db Design</a></li>-->
+                        <!--<li class="customMenu"><a href="#">Big Data</a></li>-->
+                        <!--<li class="customMenu"><a href="#">Micro Services</a></li>-->
+                        <!--<li class="customMenu"><a href="#">Apis</a></li>-->
+                        <!--</ul>-->
+                        <li><a href="#about"><i class="fa fa-question"></i>About Us</a></li>
+                        <li><a href="/industries"><i class="fa fa-paperclip"></i>Industries</a></li>
+                        <li><a href="#works"><i class="fa fa-align-justify"></i>Works</a></li>
+                        <li><a href="#team"><i class="fa fa-users"></i>Our Team</a></li>
+                        <li><a href="#contactSlice"><i class="fa fa-mail-reply"></i>Contact</a></li>
+                    </ul>
+                </div>
+
+            </nav>
+        </div>
+    </header>
+    <!-- header -->
+    <!-- content -->
+    <section id="home" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-5">
+                    <div class="flexslider" id="flexHome">
+                        <ul class="slides">
+                            <li>
+                                <h1>Open Source Integration - Mule ESB</h1>
+                            </li>
+                            <li>
+                                <h1>Java</h1>
+
+                                <h2>Agile Development</h2>
+                            </li>
+                            <li>
+                                <h1>Legacy modernization</h1>
+
+                                <h2>Open source migration..</h2>
+                            </li>
+                            <li>
+                                <h1>Api Development</h1>
+
+                                <h2>unleash your company data..</h2>
+                            </li>
+                            <li>
+                                <h1>Micro-services </h1>
+
+                                <h2>deliver more faster..</h2>
+                            </li>
+                            <li>
+                                <h1>NoSql </h1>
+
+                                <h2>Big Data for results </h2>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-4hidden-xs">
+                    <div class="flexslider" id="flexImage" style="background: none;">
+                        <ul class="slides">
+                            <li>
+                                <img src="/images/Linnas.gif" alt="" style="height:310px;" class=""/>
+                            </li>
+                            <li>
+                                <img src="images/theme-pics/home-girl.png" alt="" style="height:310px;" class=""/>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- call to action -->
+    <section class="color4 slice">
+        <div class="ctaBox ctaBoxFullwidth">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <h1>
+                            <strong>Ricston</strong> your enterprise partner ready for Business.
+                        </h1>
+                    </div>
+                    <div class="col-md-2">
+                        <a class="btn btn-sm" title=""
+                           href="https://www.ricston.com/contactUs"
+                           target="blank">
+                            <i class="fa fa-flash"></i>Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- call to action -->
+    <!-- news -->
+
+    <section class="slice" id="news">
+        <div class="container imgHover">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1>Breaking news</h1>
+
+                    <h2 class="subTitle">Here, there and everywhere... what we've been doing</h2>
+                </div>
+            </div>
+            <div class="row">
+
+                <article class="col-sm-4">
+
+                    <section class="imgWrapper">
+                        <img src="http://maxdemarzidotcom.files.wordpress.com/2012/08/neosocial.png"
+                             class="img-responsive" alt="" style="height:300px"/>
+                    </section>
+
+                    <div class="mediaHover">
+                        <div class="mask"></div>
+                        <div class="iconLinks">
+
+                            <a href="images/news/news1.jpg" class="image-link" title="Zoom"><i
+                                        class="icon-search iconRounded iconBig"></i><span>zoom</span></a>
+                        </div>
+                    </div>
+                    <section class="newsText color4">
+                        <h3>Mule Connector Certification</h3>
+                        <h4 class="date">May 4</h4>
+
+                        <p>Ricston are developing a range of new connectors for Mule ESB these will be certified and
+                            posted to the Mule Anpoint portal </p>
+                        <a href="/caseStudies/muleConnectorsCertification.html"
+                           class="btn btn-sm"><i class="icon-right-open-mini"></i>read more</a>
+                    </section>
+
+                </article>
+
+
+                <article class="col-sm-4">
+                    <section class="imgWrapper">
+                        <img src="http://cdn.meme.am/instances/500x/54175628.jpg" class="img-responsive"
+                             alt="microservices everywhere"/>
+                    </section>
+                    <div class="mediaHover">
+                        <div class="mask"></div>
+                        <div class="iconLinks">
+                            <a href="images/news/news2.jpg" class="image-link" title="Zoom" height="393px"><i
+                                        class="icon-search iconRounded iconBig"></i><span>zoom</span></a>
+                        </div>
+                    </div>
+                    <section class="newsText color4">
+                        <h3>Microservices</h3>
+                        <h4 class="date">April 24</h4>
+
+                        <p>Build microservices now the Ricston way by leveraging Raml api builder to rapidly expose
+                            legacy and new systems to next generation services</p>
+                        <a href="/industries"
+                           class="btn btn-sm" height="393px"><i class="icon-right-open-mini "></i>read more</a>
+                    </section>
+                </article>
+
+
+                <article class="col-sm-4">
+                    <section class="imgWrapper">
+                        <img src="/images/MongoDBFinance.png" class="img-responsive" alt="" height="393px"/>
+                    </section>
+                    <div class="mediaHover">
+                        <div class="mask"></div>
+                        <div class="iconLinks">
+                            <a href="/bigdata.html" class="image-link" title="Zoom"><i
+                                        class="icon-search iconRounded iconBig"></i><span>zoom</span></a>
+                        </div>
+                    </div>
+                    <section class="newsText color4">
+                        <h3>Ricston host MongoDB talk</h3>
+                        <h4 class="date">April 1</h4>
+
+                        <p>Ricston in asoociation with MongoDB host a talk with financial partners around real world
+                            usecase using MongoDb for processing Finance data</p>
+                        <a href="/industries"
+                           class="btn btn-sm"><i class="icon-right-open-mini"></i>read more</a>
+                    </section>
+                </article>
+
+
+            </div>
+        </div>
+    </section>
+    <!-- news -->
+    <!-- services -->
+    <section class="slice color1" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1>Our services</h1>
+
+                    <h2 class="subTitle">Open source software integration services on-shore, near shore </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="row boxFeature">
+                        <div class="col-xs-3">
+                            <i class="icon-heart iconBig"></i>
+                        </div>
+                        <div class="col-xs-9">
+                            <h2>Hybrid Teams</h2>
+
+                            <p>Onsite and near shore teams, ensuring the team stays in sync with your goals, clean
+                                communication and knowledge shares</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="row boxFeature">
+                        <div class="col-xs-3">
+                            <i class="icon-plane-outline  iconBig"></i>
+                        </div>
+                        <div class="col-xs-9">
+                            <h2>Enterprise Development</h2>
+
+                            <p>Building on a strong open source partnership, Ricston brings expertise in a wide rage of
+                                open source technologies</p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="center-block col-md-9" style="float:none;">
+                    <center>
+                        <div class="btn btn-success btn-sm"><a href="/tech#Mule">Mule Esb </a></div>
+                        <div class="btn btn-success btn-sm"><a href="/tech#MongoDb">Mongo Db</a></div>
+                        ,
+                        <div class="btn btn-success btn-sm"><a href="/tech#Mule">Hadoop </a></div>
+                        ,
+                        <div class="btn btn-success btn-sm"><a href="/tech#Scala">Scala</a></div>
+                        ,
+                        <div class="btn btn-success btn-sm"><a href="/tech#Java">Java</a></div>
+                        ,
+                        <div class="btn btn-success btn-sm"><a href="/tech#DevOps">DevOps</a></div>
+                        ,
+                        <div class="btn btn-success btn-sm"><a href="/tech#Ansible">Ansible</a></div>
+                        ,
+                        <div class="btn btn-success btn-sm"><a href="/tech#Chef">Chef</a></div>
+                        ,
+                        <div class="btn btn-success btn-sm"><a href="/tech#Puppet">Puppet</a></div>
+                        ,
+                        <div class="btn btn-success btn-sm"><a href="/tech#Ansible">Android</a></div>
+                        ,
+                        <div class="btn btn-success btn-sm"><a href="/tech#Nodejs">Node.JS</a></div>
+                        ,
+                        <div class="btn btn-success btn-sm"><a href="/tech#Salesforce">Salesforce</a></div>
+                        ,
+                        <div class="btn btn-success btn-sm"><a href="/tech#Puppet">Postgres/EnterpriseDB</a></div>
+                    </center>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="row boxFeature">
+                    <div class="col-xs-3">
+                        <i class="icon-resize-full-outline iconBig"></i>
+                    </div>
+                    <div class="col-xs-9">
+                        <h2>API design</h2>
+
+                        <p>Unleash your enterprise data and systems and create new services with secure, monitized
+                            api's </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="row boxFeature">
+                    <div class="col-xs-3">
+                        <i class="icon-edit iconBig"></i>
+                    </div>
+                    <div class="col-xs-9">
+                        <h2>Cloud Services</h2>
+
+                        <p>Add new or migrate your enterpise servies with our cloud expertise</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+</section>
+<!-- services -->
+
+
+<div id="paralaxSlice1" data-stellar-background-ratio="0.5">
+    <div class="maskParent">
+        <div class="paralaxMask"></div>
+        <div class="paralaxText container">
+            <h1>From finance to non-profit, media to cloud services we face an un-precidented rate of change</h1>
+            </blockquote>
+        </div>
+    </div>
+</div>
+
+<section class="slice" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>About us</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>Open Source since Birth</h2>
+
+                <p>
+                    Founded in 2006 by Peter Delia and Ross Mason (founder of the Mule ESB project and MuleSoft),
+                    Ricston provides specialist Professional Services around the world for Mule, the leading Open
+                    Source ESB and a varity of open source technologies.
+                </p>
+
+                <p>
+                    Ricston offers consulting, mentoring, training and software development services in line with
+                    industry best practice to customers in a diverse range of industry verticals including
+                    Our clients span corporate end users and system integrators in corporate, government and
+                    education sectors as well as MuleSoft themselves.
+                </p>
+
+            </div>
+
+            <div class="col-sm-4">
+                <h2>Mobile Ready - Api's, Android</h2>
+
+                <p> From Android to Api's, Ricston advises, builds and deploys the latest generation of technoliges
+                    to help partners and companies keep up with the latest business innovations</p>
+
+                <p> Ricston have developed open, innovative and secure android solutoins to deliver and manage
+                    Android content to the enterprise and education</p>
+            </div>
+
+
+            <div class="col-sm-4">
+                <h2>Microservices</h2>
+
+                <p>The enteprise bus allows for greater enterprise agility. Api gateways allows less britle
+                    department and even inter-enterprise integration building a new generation of services and
+                    sources of revenues. </p>
+
+                <h2>Exerprise</h2>
+
+                <p>
+                    more than 10 years of experience accreditation to provide certification in Mule ESB
+                    specific industry knowledge
+                </p>
+            </div>
+            <div class="col-md-8 text-center">
+                <a href="/industries/#Finance"> <div class="btn btn-warning btn-sm">Finance</div></a>
+                ,
+                <a href="/industries/"><div class="btn btn-warning btn-sm">Healthcare</div></a>
+                ,
+                <a href="/industries/"><div class="btn btn-warning btn-sm">Retail</div></a>
+                ,
+                <a href="/industries/"><div class="btn btn-warning btn-sm">Tourism</div></a>
+                ,
+                <a href="/industries/"><div class="btn btn-warning btn-sm">Government</div></a>
+                <br/>
+                & other sectors
+                highly qualified and fun to work with team
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div id="paralaxSlice2" data-stellar-background-ratio="0.5">
+    <div class="maskParent">
+        <div class="paralaxMask"></div>
+        <div class="paralaxText container">
+            <h1>Ricston - offices London, Malta and through out Europe</h1>
+        </div>
+    </div>
+</div>
+
+<section class="slice" id="works">
+    <div class="container clearfix">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Our Work</h1>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-10 col-sm-5" style="height:85px; padding-left:80px;">
+                            <div class="flexslider" id="flexCompany">
+                                <ul class="slides">
+                                    <li><img src="/images/company/company1.jpg"/></li>
+                                    <li><img src="/images/company/company2.jpg"/></li>
+                                    <li><img src="/images/company/company3.jpg"/></li>
+                                    <li><img src="/images/company/company4.jpg"/></li>
+                                    <li><img src="/images/company/company5.jpg"/></li>
+                                    <li><img src="/images/company/company6.jpg"/></li>
+                                    <li><img src="/images/company/company7.jpg"/></li>
+                                    <li><img src="/images/company/company8.jpg"/></li>
+                                    <li><img src="/images/company/company9.jpg"/></li>
+                                    <li><img src="/images/company/company10.jpg"/></li>
+                                    <li><img src="/images/company/company11.jpg"/></li>
+                                    <li><img src="/images/company/company12.jpg"/></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <h2 class="subTitle">Our Projects</h2>
+            </div>
+            <nav id="filter" class="col-md-12 text-center">
+                <ul>
+                    <li><a href="" class="btn btn-sm current" data-filter="*">All</a></li>
+                    <li><a href="" class="btn btn-sm" data-filter=".graphics">Telecom</a></li>
+                    <li><a href="" class="btn btn-sm" data-filter=".women">Finance</a></li>
+                    <li><a href="" class="btn btn-sm" data-filter=".cats">Big Data</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="portfolio-items isotopeWrapper clearfix imgHover row" id="3">
+
+            <article class="col-sm-4 isotopeItem women">
+                <section class="imgWrapper">
+                    <img alt="" src="images/portfolio/vign6.jpg" class="img-responsive">
+                </section>
+                <div class="mediaHover">
+                    <div class="mask"></div>
+                    <div class="iconLinks">
+                        <a href="portfolio-project-fullwidth-image.html" title="link" class="sizer portfolioSheet">
+                            <i class="icon-picture iconRounded iconBig"></i>
+                            <span>link</span>
+                        </a>
+                        <a href="images/portfolio/zoom6.jpg" class="image-link" title="Full width image">
+                            <i class="icon-search iconRounded iconBig"></i>
+                            <span>zoom</span>
+                        </a>
+                    </div>
+                </div>
+                <section class="boxContent">
+                    <h3>Full width image</h3>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus
+                        sollicitudin placerat. <br>
+                        <a href="portfolio-project-fullwidth-image.html" class="moreLink portfolioSheet">&rarr; read
+                            more</a>
+                    </p>
+                </section>
+            </article>
+
+            <article class="col-sm-4 isotopeItem cats">
+                <section class="imgWrapper">
+                    <img alt="" src="images/portfolio/vign1.jpg" class="img-responsive">
+                </section>
+                <div class="mediaHover">
+                    <div class="mask"></div>
+                    <div class="iconLinks">
+                        <a href="portfolio-project-fullwidth-video.html" title="link" class="portfolioSheet sizer">
+                            <i class="icon-videocam iconRounded iconBig"></i>
+                            <span>link</span>
+                        </a>
+                        <a href="http://www.youtube.com/watch?v=aqrtF7L86NQ" class="image-iframe"
+                           title="Video Popup">
+                            <i class="icon-search iconRounded iconBig"></i>
+                            <span>video</span>
+                        </a>
+                    </div>
+                </div>
+                <section class="boxContent">
+                    <h3>Video YouTube</h3>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus
+                        sollicitudin placerat. <br>
+                        <a href="portfolio-project-fullwidth-video.html" class="moreLink portfolioSheet">&rarr; read
+                            more</a>
+                    </p>
+                </section>
+            </article>
+
+            <article class="col-sm-4 isotopeItem graphics">
+                <section class="imgWrapper">
+                    <img alt="" src="images/portfolio/vign7.jpg" class="img-responsive">
+                </section>
+                <div class="mediaHover">
+                    <div class="mask"></div>
+                    <div class="iconLinks">
+                        <a href="portfolio-project-fullwidth-video.html" title="link" class="sizer portfolioSheet">
+                            <i class="icon-videocam iconRounded iconBig"></i>
+                            <span>link</span>
+                        </a>
+                        <a href="http://vimeo.com/ondemand/5335/75660130" class="image-iframe" title="Video Popup">
+                            <i class="icon-search iconRounded iconBig"></i>
+                            <span>video</span>
+                        </a>
+                    </div>
+                </div>
+                <section class="boxContent">
+                    <h3>Video Vimeo</h3>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus
+                        sollicitudin placerat. <br>
+                        <a href="portfolio-project-fullwidth-video.html" class="moreLink portfolioSheet">&rarr; read
+                            more</a>
+                    </p>
+                </section>
+            </article>
+
+            <article class="col-sm-4 isotopeItem cats">
+                <section class="imgWrapper">
+                    <img alt="" src="images/portfolio/vign3.jpg" class="img-responsive">
+                </section>
+                <div class="mediaHover">
+                    <div class="mask"></div>
+                    <div class="iconLinks">
+                        <a href="portfolio-project-fullwidth-carousel.html" title="link"
+                           class="sizer portfolioSheet">
+                            <i class="icon-camera iconRounded iconBig"></i>
+                            <span>link</span>
+                        </a>
+                        <a href="images/portfolio/carousel-1.jpg" class="image-link" title="Zoom"
+                           data-gallery="images/portfolio/carousel-2.jpg,images/portfolio/carousel-3.jpg">
+                            <i class="icon-search iconRounded iconBig"></i>
+                            <span>gallery</span>
+                        </a>
+                    </div>
+                </div>
+                <section class="boxContent">
+                    <h3>Gallery</h3>
+
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus
+                        sollicitudin placerat. <br>
+                        <a href="portfolio-project-fullwidth-carousel.html" class="moreLink portfolioSheet">&rarr;
+                            read more</a>
+                    </p>
+                </section>
+            </article>
+            <article class="col-sm-4 isotopeItem cats">
+                <section class="imgWrapper">
+                    <img alt="" src="images/portfolio/vign2.jpg" class="img-responsive">
+                </section>
+                <div class="mediaHover">
+                    <div class="mask"></div>
+                    <div class="iconLinks">
+                        <a href="portfolio-project-fullwidth-carousel.html" title="link"
+                           class="sizer portfolioSheet"> <i class="icon-picture iconRounded iconBig"></i>
+                            <span>link</span>
+                        </a>
+                        <a href="images/portfolio/zoom2.jpg" class="image-link" title="Gallery Popup">
+                            <i class="icon-search iconRounded iconBig"></i>
+                            <span>zoom</span>
+                        </a>
+                    </div>
+                </div>
+                <section class="boxContent">
+                    <h3>Lorem ipsum dolor sit amet</h3>
+
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus
+                        sollicitudin placerat. <br>
+                        <a href="portfolio-project-fullwidth-carousel.html" class="moreLink portfolioSheet">&rarr;
+                            read more</a>
+                    </p>
+                </section>
+            </article>
+
+            <article class="col-sm-4 isotopeItem women">
+                <section class="imgWrapper">
+                    <img alt="" src="images/portfolio/vign4.jpg" class="img-responsive">
+                </section>
+                <div class="mediaHover">
+                    <div class="mask"></div>
+                    <div class="iconLinks">
+                        <a href="portfolio-project-fullwidth-image.html" title="link" class="sizer portfolioSheet">
+                            <i class="icon-picture iconRounded iconBig"></i>
+                            <span>link</span>
+                        </a>
+                        <a href="images/portfolio/zoom4.jpg" class="image-link" title="Zoom">
+                            <i class="icon-search iconRounded iconBig"></i>
+                            <span>zoom</span>
+                        </a>
+                    </div>
+                </div>
+                <section class="boxContent">
+                    <h3>Lorem ipsum dolor sit amet</h3>
+
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus
+                        sollicitudin placerat. <br>
+                        <a href="portfolio-project-fullwidth-image.html" class="moreLink portfolioSheet">&rarr; read
+                            more</a>
+                    </p>
+                </section>
+            </article>
+
+
+            <article class="col-sm-4 isotopeItem graphics">
+                <section class="imgWrapper">
+                    <img alt="" src="images/portfolio/vign8.jpg" class="img-responsive">
+                </section>
+                <div class="mediaHover">
+                    <div class="mask"></div>
+                    <div class="iconLinks">
+                        <a href="portfolio-project-fullwidth-image.html" title="link" class="sizer portfolioSheet">
+                            <i class="icon-picture iconRounded iconBig"></i>
+                            <span>link</span>
+                        </a>
+                        <a href="images/portfolio/zoom8.jpg" class="image-link" title="Zoom">
+                            <i class="icon-search iconRounded iconBig"></i>
+                            <span>zoom</span>
+                        </a>
+                    </div>
+                </div>
+                <section class="boxContent">
+                    <h3>Lorem ipsum dolor sit amet</h3>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus
+                        sollicitudin placerat.<br>
+                        <a href="portfolio-project-fullwidth-image.html" class="moreLink portfolioSheet">&rarr; read
+                            more</a>
+                    </p>
+                </section>
+            </article>
+
+            <article class="col-sm-4 isotopeItem women">
+                <section class="imgWrapper">
+                    <img alt="" src="images/portfolio/vign5.jpg" class="img-responsive">
+                </section>
+                <div class="mediaHover">
+                    <div class="mask"></div>
+                    <div class="iconLinks">
+                        <a href="portfolio-project-fullwidth-image.html" title="link" class="sizer portfolioSheet">
+                            <i class="icon-picture iconRounded iconBig"></i>
+                            <span>link</span>
+                        </a>
+                        <a href="images/portfolio/zoom5.jpg" class="image-link" title="Zoom">
+                            <i class="icon-search iconRounded iconBig"></i>
+                            <span>zoom</span>
+                        </a>
+                    </div>
+                </div>
+                <section class="boxContent">
+                    <h3>Lorem ipsum dolor sit amet</h3>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus
+                        sollicitudin placerat.<br>
+                        <a href="portfolio-project-fullwidth-image.html" class="moreLink portfolioSheet">&rarr; read
+                            more</a>
+                    </p>
+                </section>
+            </article>
+
+            <article class="col-sm-4 isotopeItem graphics">
+                <section class="imgWrapper">
+                    <img alt="" src="images/portfolio/vign9.jpg" class="img-responsive">
+                </section>
+                <div class="mediaHover">
+                    <div class="mask"></div>
+                    <div class="iconLinks">
+                        <a href="portfolio-project-fullwidth-carousel.html" title="link"
+                           class="sizer portfolioSheet">
+                            <i class="icon-camera iconRounded iconBig"></i>
+                            <span>link</span>
+                        </a>
+                        <a href="images/portfolio/zoom9.jpg" class="image-link" title="Zoom">
+                            <i class="icon-search iconRounded iconBig"></i>
+                            <span>zoom</span>
+                        </a></div>
+                </div>
+                <section class="boxContent">
+                    <h3>Lorem ipsum dolor sit amet</h3>
+
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus
+                        sollicitudin placerat. <br>
+                        <a href="portfolio-project-fullwidth-carousel.html" class="moreLink portfolioSheet">&rarr;
+                            read more</a>
+                    </p>
+                </section>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="slice" id="team">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>Meet our team</h1>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row text-center">
+                <h2>The Team</h2>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 col-md-5">
+                    <div class="row text-center">
+                        <img src="images/team/Peter.png" alt="" class="center-block">
+
+                        <div>
+                            <h3>Peter Delia</h3>
+
+                            <p>CEO</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-5">
+                    <div class="row text-center">
+                        <img src="images/team/Steve.png" alt="" class="center-block">
+
+                        <div>
+                            <h3>Stephen Kingswell</h3>
+
+                            <p>Operations Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-5">
+                    <div class="row text-center">
+                        <img src="images/team/Alan.png" alt="" class="center-block">
+
+                        <div>
+                            <h3>Alan Cassar</h3>
+
+                            <p>Technical Team Lead/
+                                Senior Mule Expert</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-5">
+                    <div class="row text-center">
+                        <img src="images/team/Maria.png" alt="" class="center-block">
+
+                        <div>
+                            <h3>Maria Buhagiar</h3>
+
+                            <p>Senior Officer,
+                                Accounts & Administrator</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-9 text-center">
+                    <a class="btn btn-sm" title=""
+                       href="/people">
+                        <i class="fa fa-lightbulb-o"></i>More Team .. </a>
+                    <a class="btn btn-sm" title=""
+                       href="/careers">
+                        <i class="fa fa-flash"></i>We're hiring..</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row text-center">
+                <h2>Team Feed </h2>
+            </div>
+            <%- partial('_widget/recent_posts') %>
+        </div>
+
+    </div>
+</section>
+
+<div id="paralaxSlice4" data-stellar-background-ratio="0.5">
+    <div class="maskParent">
+        <div class="paralaxMask"></div>
+
+        <div class="paralaxText">
+            <h1>Keep in touch with us</h1>
+        </div>
+    </div>
+</div>
+<section class="slice" id="contactSlice">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-12">
+                <h1 class="noSubtitle">Contact us</h1>
+            </div>
+            <!--<div class="col-sm-12">-->
+            <!--<div id="mapWrapper" class="mb30"></div>-->
+            <!--</div>-->
+            <div class="col-sm-4">
+                <img src="/images/ContactUs.jpg" width="340px"/>
+
+            </div>
+            <form method="post" action=" id=" contactfrm
+            "
+            role="form">
+
+            <div class="col-sm-4">
+                <h4>Address:</h4>
+                <address>
+                    <b>Ricston UK Ltd</b><br/>
+                    Unit 5, 520 Chiswick High Rd.<br/>
+                    London, W4 5RG <br/>
+                </address>
+                <h4>Phone:</h4>
+                <address>
+                    +44 (0)20 719 351 07 <br/>
+                </address>
+                <h4>Mobile:</h4>
+                <address>
+                    +44 (0)78 732 938 96<br/>
+                </address>
+                <hr/>
+                <address>
+                    <b>Ricston Malta Ltd</b><br/>
+                    Northfields, Suite 4, Independence Avenue, <br/>
+                    Mosta, MST9026, Malta <br/>
+                </address>
+                <h4>Phone:</h4>
+                <address>
+                    +356 2133 4457 <br/>
+                </address>
+                <h4>Fax:</h4>
+                <address>
+                    +356 2133 4156<br/>
+                </address>
+
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter name"
+                           title="Please enter your name (at least 2 characters)"/>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter email"
+                           title="Please enter a valid email address"/>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input name="phone" class="form-control required digits" type="tel" id="phone" size="30"
+                           value="" placeholder="Enter phone"
+                           title="Please enter a valid phone number (at least 10 characters)">
+                </div>
+                <div class="form-group">
+                    <label for="comments">Comments</label>
+                            <textarea name="comment" class="form-control" id="comments" cols="3" rows="5"
+                                      placeholder="Enter your message…"
+                                      title="Please enter your message (at least 10 characters)"></textarea>
+                </div>
+                <!--<fieldset class="clearfix securityCheck">-->
+                <!--<legend>Security</legend>-->
+                <!--<div class="form-group">-->
+                <!--<input class="required form-control" id="verify" name="verify" type="text">-->
+                <!--</div>-->
+                <!--</fieldset>-->
+            </div>
+            <div class="col-md-8 col-md-offset-6">
+                <div class="result"></div>
+                <button name="submit" type="submit" class="btn btn-md" id="submit"> Submit</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- content -->
+</div>
+<!-- global wrapper -->
+<!-- End Document
+================================================== -->
+
+<script type="text/javascript" src="/js/respond/respond.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+<!-- third party plugins  -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.3.0/jquery.flexslider-min.js"></script>
+
+<script type="text/javascript" src="/js/isotope/jquery.isotope.min.js"></script>
+<script type="text/javascript" src="/js/isotope/jquery.isotope.sloppy-masonry.min.js"></script>
+<script type="text/javascript" src="/js/neko-contact-ajax-plugin/js/jquery.form.js"></script>
+<script type="text/javascript" src="/js/neko-contact-ajax-plugin/js/jquery.validate.min.js"></script>
+<script type="text/javascript"
+        src="http://ashley-bootstrap3-website-template.little-neko.com/v1.6.1/files/js-plugin/magnific-popup/jquery.magnific-popup.min.js"></script>
+<!--<script type="text/javascript" src="/js/parallax/jquery.scrollTo-1.4.3.1-min.js"></script>-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/1.4.0/jquery.localScroll.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/stellar.js/0.6.2/jquery.stellar.min.js"></script>
+<!-- <script type="text/javascript" src="/js/smoothscroll/SmoothScroll.js"></script> -->
+<script type="text/javascript"
+        src="http://ashley-bootstrap3-website-template.little-neko.com/v1.6.1/files/js-plugin/pageSlide/jquery.pageslide-custom.js"></script>
+<script type="text/javascript"
+        src="http://ashley-bootstrap3-website-template.little-neko.com/v1.6.1/files/js-plugin/jquery.sharrre-1.3.4/jquery.sharrre-1.3.4.min.js"></script>
+
+<script type="text/javascript" src="/js/owl.carousel/owl.carousel.min-MODIFIED.js"></script>
+
+<!-- Custom  -->
+<script type="text/javascript" src="js/custom.js"></script>
+</body>
+
+
+<%- partial('_partial/footer') %>

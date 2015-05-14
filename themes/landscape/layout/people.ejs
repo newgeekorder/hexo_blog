@@ -1,0 +1,34 @@
+layout: false
+---
+<%- partial('_partial/head') %>
+
+<container>
+    <div id="<%= page.layout %>-<%= page.slug %>" class="" itemscope
+             itemprop="blogPost">
+
+        <div class="">
+            <%- partial('post/gallery') %>
+            <% if (page.link || page.title){ %>
+            <header class="article-header">
+                <%- partial('post/title', {class_name: 'article-title'}) %>
+            </header>
+            <% } %>
+            <div class="" itemprop="articleBody">
+                <% if (page.excerpt && index){ %>
+                <%- page.excerpt %>
+                <% if (theme.excerpt_link){ %>
+                <p class="article-more-link">
+                    <a href="<%- url_for(page.path) %>#more"><%= theme.excerpt_link %></a>
+                </p>
+                <% } %>
+                <% } else { %>
+                <%- page.content %>
+                <% } %>
+            </div>
+        </div>
+    </div>
+
+    <h2>Posts</h2>
+    <% site.categories.findOne({name: page.title}) %>
+    <%- partial('_partial/footer') %>
+</container>

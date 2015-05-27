@@ -1,3 +1,10 @@
+<script type="application/javascript">
+        // set the menu header to active
+        $(function() {
+             $('.active').attr("class", "");
+             $('li#industries').attr("class","active");
+        });
+</script>
 
 ## Finance
 

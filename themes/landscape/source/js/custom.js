@@ -856,73 +856,73 @@ $(window).load(function() {
     | PRELOADER
     |--------------------------------------------------------------------------
     */ 
-    $('#status').fadeOut(); // will first fade out the loading animation
-    $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
-    $('body').delay(350).css({'overflow':'visible'});
+    //$('#status').fadeOut(); // will first fade out the loading animation
+    //$('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+    //$('body').delay(350).css({'overflow':'visible'});
 
     /*
     |--------------------------------------------------------------------------
     | ISOTOPE USAGE FILTERING
     |--------------------------------------------------------------------------
     */ 
-    if($('.isotopeWrapper').length){
-
-    	var $container = $('.isotopeWrapper');
-    	var $resize = $('.isotopeWrapper').attr('id');
-        // initialize isotope
-        
-        $container.isotope({
-        	layoutMode: 'sloppyMasonry',
-        	itemSelector: '.isotopeItem',
-        	filter: '*',
-            resizable: false, // disable normal resizing
-            masonry: {
-            	columnWidth: $container.width() / $resize
-            }
-       
-        });
-
-
-        //var rightHeight = $('#works').height();
-        $('#filter a').click(function(e){
-        	e.preventDefault();
-        	//$('#works').height(rightHeight);
-        	$('#filter a').removeClass('current');
-
-
-        	$(this).addClass('current');
-        	var selector = $(this).attr('data-filter');
-        	
-        	$container.isotope({
-        		filter: selector,
-        		animationOptions: {
-        			duration: 300,
-        			easing: 'easeOutQuart'
-        		}
-        	});
-
-        	if (isDesktop === true && $('[id^="paralaxSlice"]').length){
-	        	setTimeout(function(){
-	        		$.stellar('refresh');
-	        	}, 800);
-        	}
-
-    
-        	return false;
-        });
-        
-        
-        $(window).smartresize(function(){
-        	$container.isotope({
-                // update columnWidth to a percentage of container width
-                masonry: {
-                	columnWidth: $container.width() / $resize
-                }
-            });
-        });
-        
-
-    }  
+    //if($('.isotopeWrapper').length){
+    //
+    //	var $container = $('.isotopeWrapper');
+    //	var $resize = $('.isotopeWrapper').attr('id');
+    //    // initialize isotope
+    //
+    //    $container.isotope({
+    //    	layoutMode: 'sloppyMasonry',
+    //    	itemSelector: '.isotopeItem',
+    //    	filter: '*',
+    //        resizable: false, // disable normal resizing
+    //        masonry: {
+    //        	columnWidth: $container.width() / $resize
+    //        }
+    //
+    //    });
+    //
+    //
+    //    //var rightHeight = $('#works').height();
+    //    $('#filter a').click(function(e){
+    //    	e.preventDefault();
+    //    	//$('#works').height(rightHeight);
+    //    	$('#filter a').removeClass('current');
+    //
+    //
+    //    	$(this).addClass('current');
+    //    	var selector = $(this).attr('data-filter');
+    //
+    //    	$container.isotope({
+    //    		filter: selector,
+    //    		animationOptions: {
+    //    			duration: 300,
+    //    			easing: 'easeOutQuart'
+    //    		}
+    //    	});
+    //
+    //    	if (isDesktop === true && $('[id^="paralaxSlice"]').length){
+	 //       	setTimeout(function(){
+	 //       		$.stellar('refresh');
+	 //       	}, 800);
+    //    	}
+    //
+    //
+    //    	return false;
+    //    });
+    //
+    //
+    //    $(window).smartresize(function(){
+    //    	$container.isotope({
+    //            // update columnWidth to a percentage of container width
+    //            masonry: {
+    //            	columnWidth: $container.width() / $resize
+    //            }
+    //        });
+    //    });
+    //
+    //
+    //}
 
 
 /**PROCESS ICONS**/
@@ -982,18 +982,18 @@ $('.iconBoxV3 a').hover(function() {
    		});
 
 
-      
-        if (isMobile === false && typeof $("section").data('stellar-background-ratio') !== 'undefined')
-        {
-            $(window).stellar({
-                horizontalScrolling: false,
-                responsive:true,
-                scrollProperty: 'scroll',
-                parallaxElements: false,
-                horizontalOffset: 0,
-                verticalOffset: 0
-            });
-        }
+        //
+        //if (isMobile === false && typeof $("section").data('stellar-background-ratio') !== 'undefined')
+        //{
+        //    $(window).stellar({
+        //        horizontalScrolling: false,
+        //        responsive:true,
+        //        scrollProperty: 'scroll',
+        //        parallaxElements: false,
+        //        horizontalOffset: 0,
+        //        verticalOffset: 0
+        //    });
+        //}
    	}
 
 //END WINDOW LOAD

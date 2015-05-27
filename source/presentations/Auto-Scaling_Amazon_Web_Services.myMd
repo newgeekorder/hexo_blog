@@ -1,0 +1,665 @@
+
+### Auto Scaling using AWS
+#### Richard Donovan
+#### [Ricston Uk Ltd](http://www.ricston.co.uk)
+
+http://www.linkedin.com/richard.donovan
+
+---
+
+### Introduction
+* Need for Auto Scaling (elastic scaling)
+* How AWS Auto scaling can help us ?
+* How to configure an Auto scaling policy in AWS
+* Things to remember before Scaling out and down
+* Understand the Intricacies while integrating Auto scaling with other Amazon Web Services
+* Risks involved in AWS Auto Scaling
+
+---
+
+### Amazon Services to be Scaled
+- **EC2** - Elastic Compute Cloud
+- **EBS** - Elastic Block Storage
+- **S3** - Simple Storage Service
+- **SQS** - Simple Queue Service
+- **ELB** - Elastic Load Balancing
+- **AMI** - Amazon Machine Images
+- **AZ** - Amazon Availability Zones ( Data centers)
+- **VPC** - Amazon Virtual Private Cloud
+- **RDS** - Amazon Relational Database Service
+
+---
+
+### Scaling Out Topics
+* Scale out : Achieving scalability by increasing the number of Amazon EC2 instances
+* Scale up : Achieving scalability by resizing the capacity( Compute, Memory and EBS) of existing Amazon EC2 instances
+* Scale down : Decreasing the number of Amazon EC2 instances or the configuration for existing EC2 instances
+
+---
+
+### Need for Auto Scaling
+* Upfront Capacity Investment
+* Actual Demand vs Fixed Capacity
+
+* *Problem 1*: Wasted Capacity
+* *Problem 2 *: Lost Customers
+
+---
+
+### What is AWS Auto Scaling ?
+* AWS Auto Scaling allows us to scale our Amazon EC2 capacity out or down automatically according
+to the load patterns .
+  * We can expand the number of Amazon EC2 instances from 1 to 100+ automatically during load peaks
+  * We can reduce the number of Amazon EC2 instances from 100+ to 1 automatically during load valleys
+
+---
+
+### AWS Auto Scaling
+* We can closely align our Infrastructure with our load requirements and save costs
+
+---
+
+### Load Volatility Scenarios
+
+---
+### Candidates for Auto Scaling
+* Predictable Bursts (batch, seasonal)
+* Load Volatility characteristics like:
+ * Predictable bursts of request load
+ * A Pattern in Spikes and lows
+ * “On” and “Off” loads
+ * Non linear Seasonal trends
+
+---
+
+### Candidates for Auto Scaling (2)
+* Applications which has following Load Volatility characteristics like
+ * Un Predictable bursts of request load
+ * No specific pattern in Spikes and lows
+ * Highly elastic ,unexpected and scalable demands
+
+---
+
+### Candidates for Auto Scaling (3)
+
+* Constantly Growing
+
+Applications which has following Load Volatility characteristics like
+* Constantly growing
+* Successful and growing very fast
+* Complex lead time for deployment
+
+---
+
+### What Amazon Auto Scaling can do ?
+* Handle all the 3 load scenarios (Candidates)
+* Scale out Amazon EC2 instances seamlessly and automatically when demand increases
+* Scale down unwanted Amazon EC2 instances automatically and save money when demand subsides
+* Decide the scaling based on AWS CloudWatch metric
+* Auto Scale your Web servers(Amazon EC2) in combination with AWS Elastic Load Balancing
+
+---
+
+### How much does it Cost ?
+
+> Cost for using AWS Auto Scaling service = $0
+
+However it does require **Amazon CloudWatch** monitoring service to function
+and Amazon CloudWatch is billed on usage basis.
+
+---
+
+### Some AWS Auto scaling Concepts
+* **Auto Scaling group:** Logical grouping of multiple Amazon EC2 instances for easy scaling and Management
+* **Health Check:** Calls to check on the health status of each Amazon EC2 instance in an Auto Scaling group
+* **Launch Configuration:** Captures the parameters necessary to create new EC2 instances in Auto Scaling mode
+
+---
+
+
+### Some AWS Auto scaling Concepts
+* **Triggers:** A CloudWatch alarm and an Auto Scaling policy that describes the actions when the alarm threshold is crossed . Two Triggers – Scaling out and
+Scaling down needs to be created
+* **Policy:** Set of instructions for Auto Scaling that tells the service how to respond to AWS CloudWatch alarm messages
+
+---
+
+
+#### Parameters on Amazon Auto Scaling (1 of 2)
+* **CPUUtilization** - The percentage of allocated EC2 compute units that are currently in use on the instance
+* **AutoScalingGroupName** - Filters and responds with data that we request about all the Amazon EC2 instance part of the Auto scaling group
+* **Latency** - Time taken between a request and the corresponding response as seen by the AWS Elastic Load Balancer
+
+---
+
+#### Parameters on Amazon Auto Scaling (2 of 2)
+
+* **RequestCount** - The number (sum) of requests processed by the AWS Elastic Load Balancer
+* **HealthyHostCount** - The number (average) of healthy instances behind the AWS Elastic Load balancer
+* **unHealthyHostCount** - The number (average) of unhealthy instances behind the AWS Elastic Load Balancer
+
+
+---
+
+
+### Steps to configure Amazon Auto Scaling with AWS Elastic Load Balancing
+
+---
+
+* Step 1: Configuring AWS Auto Scaling with
+```
+elb-create-lb my-load-balancer --headers --listener "lb-port=80,instance-
+port=8080,protocol=HTTP" --availability-zones us-east-1c
+```
+* `elb-create-lb` App server port to which requests needs to be forwarded
+* `my-load-balancer` Add a name to your load balancer
+* `lb-port=80` The load balancer port
+
+---
+
+
+#### Step 2: Create a launch configuration
+
+```
+as-create-launch-config my-lconfig --image-id ami-e3826c8a --instance-type m1.small --key
+my-key-pair --group my-security-group
+```
+
+* `my-lconfig`  Name your launch configuration
+* `my-key-pair` Key pair / Security group settings for the Amazon EC2 instances
+* `ami-e3826c8a` Amazon Machine image(AMI) to be launched during scaling
+* `m1.small` Amazon EC2 instance Size
+
+---
+
+
+### Step 3: Create an AWS Auto Scale Group
+```
+as-create-auto-scaling-group my-as-group --availability-zones us-east-1c
+–launch-configuration my-lconfig --max-size 11 --min-size 3 --cooldown 180 --load-
+balancers my-load-balancer```
+
+* **my-load-balancer** Load balancer name in which the new Amazon EC2 instances launched will be attached
+* **my-as-group** Name your Auto scale group
+* **availability-zones** availability Zone in which the Auto scaled Amazon EC2 instances will be launched
+* **180** Minimum/Maximum number of Amazon EC2 instances maintained by Auto Scale
+
+---
+
+#### Step 4: Configure the Auto scaling Triggers
+```
+as-create-or-update-trigger my-as-trigger --auto-scaling-group my-as-group --namespace
+"AWS/EC2" --measure CPUUtilization --statistic Average --dimensions
+"AutoScalingGroupName= my-as-group " --period 60 --lower-threshold 20 --upper-threshold
+80 --lower-breach-increment"=-2" --upper-breach-increment 4 --breach-duration 180```
+Measure the
+average CPU of
+the Auto Scale
+Group
+Scale out by 4
+Amazon EC2
+instances.
+Scale down by 2
+Amazon EC2
+instances
+Lower CPU Limit is
+20% and Upper CPU
+Limit is 80%
+
+---
+
+### Applying Amazon Auto Scaling for 3 different load scenarios
+
+---
+
+Auto Scaling Policy : Predictable Bursts
+
+* Configure Time based Auto Scaling plan
+* PutScheduledUpdateGroup
+ * Specify the date and time of execution, minimum, maximum, and desired Instance size of capacity
+```
+% as-put-scheduled-update-group-action my-group –name “My-scale-
+up” -- time “2011-04-05T02:00:00Z” -min 10 -max 50 ```
+
+---
+
+#### Auto Scaling Policy : Un predictable Bursts
+
+
+* Configure On demand Auto Scaling policy
+* Create policies for both Scaling out and Scaling down scenarios
+* Auto Scaling will respond to changing conditions dynamically
+
+```
+%as-create-auto-scaling-group as-group --availability-zones us-east-1c –
+launch-configuration my-lconfig --max-size 20 --min-size 2 --cooldown
+180 --load-balancers my-load-balancer```
+
+---
+
+#### Auto Scaling Policy : Constantly Growing
+
+
+* Periodically monitor the load requirements and manually configure the Auto scaling parameters
+* Increase the minimum fixed capacity gradually
+* Leverage On-Demand Amazon EC2 instances
+```
+%as-create-auto-scaling-group my-as-group --availability-zones us-east-
+1a –launch-configuration my-lconfig --max-size 4 --min-size 2 --
+cooldown 360 --load-balancers my-load-balancer```
+
+---
+
+##  Important points to remember before Scaling out / down using AWS Auto scaling
+
+---
+
+While Scaling out:
+* Very frequent (minutes) scaling out activity is not cost effective
+* Scaling out with smaller instance type units closely aligns our capacity with our load requirements
+* We can create a maximum of 125 scheduled actions per Auto Scaling group. This allows scaling four times a day for a 31-day month for each Auto Scaling group
+* We can configure a scheduled Scaling action for up to a month in the future
+
+---
+
+While Scaling down:
+* Amazon Auto scaling does not close the Amazon EC2 instances in the same of order of launch
+* To avoid data inconsistency architects should ensure the following points on Amazon EC2 servers of Auto scale group
+* Log files generated by Auto Scaled Amazon EC2 are moved to Amazon S3 periodically
+* Data files uploaded in the Web/App EC2 instances are moved to S3
+* Sessions of Web/App layer and Application Cache layers are replicated to a centralized /distributed resource
+
+---
+
+## Tips ,Pointers and Notes:
+
+---
+
+## Amazon Auto Scaling and AMI’s
+* Amazon Auto Scaling can launch new EC2 instances from S3 backed AMI’s and EBS backed AMI’s
+* AMI’s should be present on the Same Region where the EC2 instances will be launched in Auto scale group
+* AMI’s need not be present on the Same AZ where the EC2 instances will be launched in Auto scale group
+
+---
+
+## S3 Backed AMI’s for Auto Scaling
+
+* Web requests are sent to the AWS ELB transfers the requests to Amazon EC2 instances launched in us-east-1A availability zone
+*  Amazon EC2 instances are configured to be part of AWS Auto Scale group
+*  AWS Auto Scaling launches the new Amazon EC2 instances from the S3 backed AMI’s
+
+---
+
+### EBS Backed AMI’s for Auto Scaling
+
+Amazon Elastic Load Balancer
+2
+ AZ : us-east-1b
+AWS Security Groups
+3
+EC2 Instances
+E E EB B BS
+ S
+ S
+Amazon Auto Scaling
+1
+Web requests are sent to the
+Amazon ELB
+2
+AWS ELB transfers the requests to
+Amazon EC2 instances launched in
+us-east-1B availability zone
+3
+Amazon EC2 instances are
+configured to be part of AWS Auto
+Scale group
+4
+AWS Auto Scaling launches the new
+Amazon EC2 instances from the EBS
+backed AMI’s
+4
+Amazon Auto Scaling and AMI’s
+* EBS backed AMI’s are faster to launch compared to
+S3 backed AMI’s
+* EBS backed AMI’s (Windows) launch in 30+ seconds
+(approx)
+* S3 backed AMI’s (Windows) launch in 4 minutes (approx)
+* Sometimes it is better to have EC2 instances
+launched faster in Auto scaling when overall CPU
+threshold is breached
+* EBS backed AMI’s option in AWS Auto scaling may
+not be cost effective compared to S3 backed AMI’s
+AWS Auto scaling and Amazon EC2 instances
+Amazon Auto Scaling and Amazon EC2
+* A single Amazon Auto Scaling group can launch only
+one type of EC2 instances
+* Example , We cannot configure Amazon Auto scaling
+group to launch combinations of both m1.small and
+m1.large instance types
+* We can combine Reserved Instances (RI) and On-
+Demand EC2 Instances in our Scaling architecture
+* Amazon Auto scaling cannot be used to scale
+Amazon RDS instances
+Amazon Auto scaling and AWS regions/AZ’s
+Design 1: Amazon Auto Scaling across AZ’s
+HTTP requests are redirected to Amazon EC2 instances
+configured across the AWS availability zones in US East
+AZ: US-EAST-1A
+Amazon Elastic Load balancer
+AZ:US-EAST-1B
+Amazon Security Groups
+Amazon EC2
+instances
+Amazon Auto Scaling
+S3
+Backed
+AMI
+C
+L
+O
+U
+D
+W
+A
+T
+C
+H
+Amazon Security Groups
+Amazon EC2
+instances
+Amazon Auto Scaling
+S3
+Backed
+AMI
+C
+L
+O
+U
+D
+W
+A
+T
+C
+H
+Design 2: Amazon Auto Scaling across AWS Regions
+Architecture Not Possible
+Amazon Elastic Load balancer
+AWS USA East Region
+ AWS Europe Region
+Amazon Security Groups
+Amazon EC2
+instances
+Amazon Auto Scaling
+S3
+Backed
+AMI
+C
+L
+O
+U
+D
+W
+A
+T
+C
+H
+Amazon Security Groups
+Amazon EC2
+instances
+Amazon Auto Scaling
+S3
+Backed
+AMI
+C
+L
+O
+U
+D
+W
+A
+T
+C
+H
+Amazon Auto Scaling ,AWS Regions and AZ’s
+* AWS Auto Scaling groups can work across multiple
+AWS Availability Zones inside same Region
+* If an AWS Availability Zone becomes unavailable,
+Auto Scaling will automatically redistribute
+applications to a different Availability Zone
+* AWS Auto Scaling groups cannot work across
+Regions
+* Example , we cannot configure a same AWS Auto scaling
+group to distribute and create Amazon EC2 instances in
+both USA and Europe
+Amazon Auto scaling and AWS Elastic Load
+balancer
+Case 1: AWS Auto Scaling with AWS Elastic Load balancing
+3
+1
+Amazon Elastic Load Balancer
+2
+ AZ : us-east-1a
+AWS Security Groups
+EC2 Instances
+1
+This Architecture is suitable for Web
+Layer only . AWS ELB is attached to
+the AWS Auto Scaling group
+2
+3
+AWS ELB acts as the gateway and
+transfers the HTTP requests it
+receives to Amazon EC2 instances in
+round robin schedule
+Amazon EC2 instances are
+configured to be part of AWS Auto
+Scale group
+4
+AWS Auto Scaling launches the new
+Amazon EC2 instances
+4
+Amazon Auto Scaling
+S3 backed AMI
+5
+AWS Auto Scaling ,AWS CloudWatch
+and AWS Elastic Load Balancing
+works in union
+Case 2: Amazon Auto Scaling without AWS ELB
+Amazon EC2
+ 2
+instances of
+Auto scale group
+reads messages
+from AWS SQS
+and processes
+them
+SQS
+3
+Master EC2 instance node
+controls the Auto scaling EC2
+ Master EC2 Node
+instance group (scale out/down)
+activities programmatically
+4
+EC2 Instances
+Amazon Auto Scaling
+S3 backed AMI
+Amazon EC2
+instances are auto
+scaled
+programmatically
+depending upon
+SQS Load
+1
+Reference Auto scaling Architecture
+in AWS not using AWS ELB
+2
+Messages needed for processing are
+put in the AWS SQS using message
+producer clients
+3
+4
+Master Amazon EC2 instance node
+controls the scale up / scale down of
+the processing nodes using AWS
+Auto Scaling programmatically
+Auto scaled Amazon EC2 instance
+processing nodes picks the messages
+from Amazon SQS
+Amazon Auto Scaling and Amazon ELB
+* Auto Scaling supports, but does not require, AWS
+Elastic Load Balancing
+* We can add Elastic Load Balancing to our Auto
+Scaling group and use Elastic Load Balancing metrics
+(request latency or request count) to scale our
+application
+* During the Scaling down process, Amazon Auto
+Scaling instructs the AWS load balancer to remove
+the Amazon EC2 instance from the load balancing
+group first
+Amazon Auto scaling and Amazon Elastic IP
+Amazon Auto Scaling and Amazon Elastic IP
+* Every new Amazon EC2 instances launched by
+Amazon Auto scaling has a Private and Public IP
+address
+* Configuring Elastic IP for Amazon EC2 instances
+launched by Amazon Auto Scaling is not a cost
+effective option
+* We need to pay Amazon for unused Elastic IP’s after the
+Scale down process
+* Combining Elastic IP & Auto scaling should be analyzed
+fully before applying in specific use cases
+Amazon Auto scaling and Monitoring
+Amazon Auto Scaling and Monitoring
+* Many traditional infrastructure monitoring systems
+rely on Agents to be installed on Amazon EC2
+instances and get registered with Centralized
+monitoring server for receiving alerts
+* Since the Amazon EC2 servers are created and
+terminated dynamically by AWS Auto scaling, it will
+cause problems like
+* When new EC2 instances are created by Auto scaling the
+monitoring agents installed in them cannot auto register
+with the Centralized monitoring server
+Amazon Auto Scaling and Monitoring
+* When EC2 instances are killed by Auto scaling , the
+centralized monitoring server will misunderstand this
+action as instance non-availability and creates
+unnecessary noise
+* Hence before integrating monitoring systems into
+our AWS Auto Scaled Infrastructure we should
+ensure that it can monitor dynamically spawned
+Amazon EC2 instances
+Amazon Auto Scaling and AWS CloudWatch
+* AWS CloudWatch can monitor Auto scaled EC2
+instances
+* AWS CloudWatch should be configured “detailed
+monitoring” option for the collection of Auto
+Scaling group metrics
+* Configure Auto Scaling with group metrics to send
+aggregated data to Amazon CloudWatch every
+minute
+* Auto scaling takes appropriate Scale out /down
+actions based on the alarms it receives from
+CloudWatch
+Amazon Auto scaling and Launch
+Configurations
+Auto Scaling and Launch Configurations
+* The maximum number of launch configurations per
+AWS account is 100
+* If we modify our launch configuration, AWS Auto
+Scaling will not apply our new settings to existing
+Amazon EC2 instances
+* We can attach only one launch configuration to an
+AWS Auto Scaling group at a time
+* When AWS Auto Scaling wants to scale down, it first
+terminates instances that have an older launch
+configuration
+Amazon Auto scaling and Elastic Beanstalk
+Amazon Auto Scaling and Elastic Beanstalk
+* Amazon Elastic Beanstalk is a deployment tool used
+to automatically handle the infrastructure details
+like capacity provisioning, load balancing, auto-
+scaling, and application health monitoring
+* We cannot leverage Elastic bean stalk based Auto
+scaling in following scenarios
+– If our system demands Non Java applications to be
+configured on Auto scaling mode
+– If our application contains Java based Background
+programs (not a web app ) and they need auto scaling
+facility
+Amazon Auto scaling and Amazon VPC
+Amazon Auto Scaling and Amazon VPC
+* Amazon Auto Scaling can scale out /down Amazon
+EC2 instances inside a Amazon VPC network
+* AWS Elastic Load balancer cannot be tied to
+Amazon Auto Scaling inside Amazon VPC
+* Amazon Auto scaling is restricted only to USA east
+AZ-1a and Amazon EC2 EU (Ireland) in the Amazon
+VPC network
+AWS Auto Scaling illustration
+Following slides illustrates a visual demo of AWS
+AutoScaling case
+* Image 1: Amazon EC2 Servers at initial Stage
+* Image 2: Load Increases : Amazon EC2 Servers are
+ramped up using AWS AutoScaling
+* Image 3: Load Decreases
+* Image 4: Amazon EC2 Servers are dynamically
+scaled down using AWS AutoScaling
+The below screenshots represent a custom product developed by 8KMiles using AWS
+AutoScaling
+Image 1 : Initial Stage
+Screenshot represents a custom product developed by 8KMiles
+Image 2 : Load Increases
+Image 3 : Load Decreases
+Screenshot represents a custom product developed by 8KMiles
+Image 4 : Scaling down the EC2 instances
+Risks involved in AWS Auto Scaling
+Risk 1: AWS Auto Scaling takes between 30 – 180
+seconds sometimes to launch a new instance(s) .
+This intermediate time may cause impaired
+performance for our customers
+Risk 2: AWS Auto Scaling cannot differentiate
+between valid (vs) malicious traffic , it can scale out
+servers even for malicious traffic
+Auto Scaling is an Art
+* Auto Scaling will not work for every situation and
+every application
+* Just by deploying our application in AWS , does not
+mean our application will leverage Auto Scaling and
+scale out automatically
+* To leverage Auto scaling effectively in-depth
+architectural expertise is needed in both Application
+and Infrastructure front
+Auto Scaling is an Art
+* In some cases Auto Scaling is an on-going(monitor
+and fine tune based on trends/patterns) and not an
+one time activity
+•Badly configured Auto Scaling parameters will
+– increase the cost of infrastructure
+– cause revenue leakage rather than reducing them
+– create unnecessary excess capacity
+How do I leverage Amazon Auto Scaling
+effectively ?
+Leave it to the experts , we will
+handle this
+Cloud Architecture Consulting
+Cloud Application Development
+Cloud Migration & Implementation
+Cloud Adoption Strategy
+“Let's get the job done”
+Why 8KMiles ?
+••••Amazon Systems Integrator and Solution Developer
+Migrated 350+ servers for start-ups, small businesses and
+Enterprises
+Prior expertise in architecting Auto scaling based solutions
+In-depth understanding of Cloud infrastructure services
+8KMiles in Media
+Contact Us
+“All you need is an idea and the cloud will execute it for you.” (Structure 2010 event)
+- Dr Werner Vogels , CTO of Amazon on 8KMiles
+For more details on how 8KMiles Cloud Consulting can help
+your business , contact
+
+
+

@@ -4,13 +4,13 @@ layout: false
 
 <body data-spy="scroll" data-target="#scrollTarget" data-offset="150">
 <!-- Preloader -->
-<div id="preloader">
-    <div id="status">
-        <img src="images/theme-pics/loader.gif" alt=""/>
+<!--<div id="preloader">-->
+    <!--<div id="status">-->
+        <!--<img src="images/theme-pics/loader.gif" alt=""/>-->
 
-        <h1 class="noSubtitle">Welcome home</h1>
-    </div>
-</div>
+        <!--<h1 class="noSubtitle">Welcome home</h1>-->
+    <!--</div>-->
+<!--</div>-->
 <!-- Preloader -->
 <!-- Primary Page Layout
 ================================================== -->
@@ -26,30 +26,59 @@ layout: false
                                 class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="/index.html"><img width="180px" src="images/ricstonLogoNew.png"
-                                                                   alt="Ricston Logo"/></a></div>
+                                                                    alt="Ricston Logo"/></a></div>
                 <div class="collapse navbar-collapse navbar-ex1-collapse" id="scrollTarget">
                     <ul class="nav navbar-nav pull-right">
                         <li class="active"><a href="#home"><i class="fa fa-home"></i>Home</a></li>
                         <li class="active"><a href="#news"><i class="fa fa-lightbulb-o"></i>News</a></li>
-                        <li class="active"><a href="#services"><i class="fa fa-thumbs-up"></i>Services</a></li>
-                        <!--<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"-->
-                        <!--aria-expanded="false"><span class="caret"></span></a>-->
-                        <!--<ul class="dropdown-menu" role="menu">-->
-                        <!--<li class="customMenu"><a href="#">Mule Integration</a></li>-->
-                        <!--<li class="customMenu"><a href="#">Open Source</a></li>-->
-                        <!--<li class="customMenu"><a href="#">Java</a></li>-->
-                        <!--<li class="customMenu"><a href="#">Migration</a></li>-->
-                        <!--<li class="customMenu"><a href="#">DevOps</a></li>-->
-                        <!--<li class="customMenu"><a href="#">Testing</a></li>-->
-                        <!--<li class="customMenu"><a href="#">Db Design</a></li>-->
-                        <!--<li class="customMenu"><a href="#">Big Data</a></li>-->
-                        <!--<li class="customMenu"><a href="#">Micro Services</a></li>-->
-                        <!--<li class="customMenu"><a href="#">Apis</a></li>-->
-                        <!--</ul>-->
+                        <!--<li class="active"><a href="#services"><i class="fa fa-thumbs-up"></i>Services</a></li>-->
+                        <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-expanded="false">
+                                <i class="fa fa-thumbs-up"></i>Services</a>
+                            <!--<span class="caret"></span>-->
+                            <!--</a>-->
+                            <ul class="dropdown-menu right" role="menu">
+                                <li class="customMenu"><a href="#services">Our Services</a></li>
+                                <li class="customMenu"><a href="/services/#Mule">Mule Integration</a></li>
+                                <li class="customMenu"><a href="/services/#Open Source">Open Source</a></li>
+                                <li class="customMenu"><a href="/services/java.html">Java</a></li>
+                                <li class="customMenu"><a href="/services/#Migration">Migration</a></li>
+                                <li class="customMenu"><a href="/services/#DevOps">Dev Ops</a></li>
+                                <li class="customMenu"><a href="/services/#Testing">Testing</a></li>
+                                <li class="customMenu"><a href="/services/#Db Design">DB Design</a></li>
+                                <li class="customMenu"><a href="/services/#Big Data">Big Data</a></li>
+                                <li class="customMenu"><a href="/services/#Micro Services">Micro Services</a></li>
+                                <li class="customMenu"><a href="/services/#Apis">Apis</a></li>
+                            </ul>
+                        </li>
                         <li><a href="#about"><i class="fa fa-question"></i>About Us</a></li>
-                        <li><a href="/industries"><i class="fa fa-paperclip"></i>Industries</a></li>
-                        <li><a href="#works"><i class="fa fa-align-justify"></i>Works</a></li>
-                        <li><a href="#team"><i class="fa fa-users"></i>Our Team</a></li>
+                        <li id="industries"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                               aria-expanded="false"><i class="fa fa-paperclip"></i>Industries </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="customMenu"><a href="/industries/">Industries</a></li>
+                                <li class="customMenu"><a href="/industries/#Telecom">Telecoms & Media</a></li>
+                                <li class="customMenu"><a href="/industries/#Retail">Retail</a></li>
+                                <li class="customMenu"><a href="/industries/#Finance">Finance</a></li>
+                                <li class="customMenu"><a href="/industries/#Government">Government</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-expanded="false"><i class="fa fa-align-justify"></i>Works</a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="customMenu"><a href="/#Works">Projects</a></li>
+                                <li class="customMenu"><a href="/presentations">Presentations</a></li>
+                                <li class="customMenu"><a href="/blog">Tech Blog</a></li>
+                                <li class="customMenu"><a href="http://ricston.com/blog">Mule Blog</a></li>
+                                <li class="customMenu"><a href="/wiki/index.html">Wiki</a></li>
+                            </ul>
+                        </li>
+                        <li id="people"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                           aria-expanded="false"><i class="fa fa-users"></i>Our Team</a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="customMenu"><a href="/#team">Our Team</a></li>
+                                <li class="customMenu"><a href="/careers">Careers</a></li>
+                            </ul>
+                        </li>
                         <li><a href="#contactSlice"><i class="fa fa-mail-reply"></i>Contact</a></li>
                     </ul>
                 </div>
@@ -96,15 +125,17 @@ layout: false
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-4hidden-xs">
+                <div class="hidden-xs hidden-sm col-lg-3">
                     <div class="flexslider" id="flexImage" style="background: none;">
                         <ul class="slides">
-                            <li>
-                                <img src="/images/Linnas.gif" alt="" style="height:310px;" class=""/>
-                            </li>
-                            <li>
-                                <img src="images/theme-pics/home-girl.png" alt="" style="height:310px;" class=""/>
-                            </li>
+                            <!--<li>-->
+                            <!--<img src="/images/Linnas.gif" alt="" style="height:310px;" class=""/>-->
+                            <!--</li>-->
+                                <li>
+                                    <img src="images/theme-pics/home-girl.png"
+                                         style="padding-top:25px;max-height: 310px; max-width:277px;"/>
+                                </li>
+
                         </ul>
                     </div>
                 </div>
@@ -122,8 +153,7 @@ layout: false
                     </div>
                     <div class="col-md-2">
                         <a class="btn btn-sm" title=""
-                           href="https://www.ricston.com/contactUs"
-                           target="blank">
+                           href="/#contactSlice">
                             <i class="fa fa-flash"></i>Contact Us</a>
                     </div>
                 </div>
@@ -147,7 +177,7 @@ layout: false
                 <article class="col-sm-4">
 
                     <section class="imgWrapper">
-                        <img src="http://maxdemarzidotcom.files.wordpress.com/2012/08/neosocial.png"
+                        <img src="/images/neosocial.png"
                              class="img-responsive" alt="" style="height:300px"/>
                     </section>
 
@@ -174,7 +204,7 @@ layout: false
 
                 <article class="col-sm-4">
                     <section class="imgWrapper">
-                        <img src="http://cdn.meme.am/instances/500x/54175628.jpg" class="img-responsive"
+                        <img src="/images/54175628.jpg" class="img-responsive"
                              alt="microservices everywhere"/>
                     </section>
                     <div class="mediaHover">
@@ -266,30 +296,45 @@ layout: false
             <div class="row">
                 <div class="center-block col-md-9" style="float:none;">
                     <center>
-                        <div class="btn btn-success btn-sm"><a href="/tech#Mule">Mule Esb </a></div>
-                        <div class="btn btn-success btn-sm"><a href="/tech#MongoDb">Mongo Db</a></div>
-                        ,
-                        <div class="btn btn-success btn-sm"><a href="/tech#Mule">Hadoop </a></div>
-                        ,
-                        <div class="btn btn-success btn-sm"><a href="/tech#Scala">Scala</a></div>
-                        ,
-                        <div class="btn btn-success btn-sm"><a href="/tech#Java">Java</a></div>
-                        ,
-                        <div class="btn btn-success btn-sm"><a href="/tech#DevOps">DevOps</a></div>
-                        ,
-                        <div class="btn btn-success btn-sm"><a href="/tech#Ansible">Ansible</a></div>
-                        ,
-                        <div class="btn btn-success btn-sm"><a href="/tech#Chef">Chef</a></div>
-                        ,
-                        <div class="btn btn-success btn-sm"><a href="/tech#Puppet">Puppet</a></div>
-                        ,
-                        <div class="btn btn-success btn-sm"><a href="/tech#Ansible">Android</a></div>
-                        ,
-                        <div class="btn btn-success btn-sm"><a href="/tech#Nodejs">Node.JS</a></div>
-                        ,
-                        <div class="btn btn-success btn-sm"><a href="/tech#Salesforce">Salesforce</a></div>
-                        ,
-                        <div class="btn btn-success btn-sm"><a href="/tech#Puppet">Postgres/EnterpriseDB</a></div>
+                        <a href="/tech#Mule">
+                            <div class="btn btn-success btn-sm">Mule Esb</div>
+                        </a>
+                        <a href="/tech/mongodb.html">
+                            <div class="btn btn-success btn-sm">Mongo Db</div>
+                        </a>,
+                        <a href="/tech/hadoop.html">
+                            <div class="btn btn-success btn-sm">Hadoop</div>
+                        </a>,
+                        <a href="/tech/scala.html">
+                            <div class="btn btn-success btn-sm">Scala</div>
+                        </a>,
+                        <a href="/tech/java.html">
+                            <div class="btn btn-success btn-sm">Java</div>
+                        </a>,
+                        <a href="/wiki/devops.html">
+                            <div class="btn btn-success btn-sm">DevOps</div>
+                        </a>,
+                        <a href="/wiki/ansible.html">
+                            <div class="btn btn-success btn-sm">Ansible</div>
+                        </a>,
+                        <a href="/wiki/chef.html">
+                            <div class="btn btn-success btn-sm">Chef</div>
+                        </a>,
+                        <a href="/wiki/puppet.html">
+                            <div class="btn btn-success btn-sm">Puppet</div>
+                        </a>,
+                        <a href="/wiki/android.html">
+                            <div class="btn btn-success btn-sm">Android</div>
+                        </a>,
+                        <a href="/tech#Nodejs">
+                            <div class="btn btn-success btn-sm">Node.JS</div>
+                        </a>,
+                        <a href="/wiki/salesforce.html">
+                            <div class="btn btn-success btn-sm">Salesforce</div>
+                        </a>,
+                        <a href="/wiki/postgresql.html">
+                            <div class="btn btn-success btn-sm">Postgres/EnterpriseDB</div>
+                        </a>
                     </center>
                     </p>
                 </div>
@@ -391,22 +436,52 @@ layout: false
                 </p>
             </div>
             <div class="col-md-8 text-center">
-                <a href="/industries/#Finance"> <div class="btn btn-warning btn-sm">Finance</div></a>
+                <a href="/industries/#Finance">
+                    <div class="btn btn-warning btn-sm">Finance</div>
+                </a>
                 ,
-                <a href="/industries/"><div class="btn btn-warning btn-sm">Healthcare</div></a>
+                <a href="/industries/">
+                    <div class="btn btn-warning btn-sm">Healthcare</div>
+                </a>
                 ,
-                <a href="/industries/"><div class="btn btn-warning btn-sm">Retail</div></a>
+                <a href="/industries/">
+                    <div class="btn btn-warning btn-sm">Retail</div>
+                </a>
                 ,
-                <a href="/industries/"><div class="btn btn-warning btn-sm">Tourism</div></a>
+                <a href="/industries/">
+                    <div class="btn btn-warning btn-sm">Tourism</div>
+                </a>
                 ,
-                <a href="/industries/"><div class="btn btn-warning btn-sm">Government</div></a>
+                <a href="/industries/">
+                    <div class="btn btn-warning btn-sm">Government</div>
+                </a>
                 <br/>
                 & other sectors
                 highly qualified and fun to work with team
 
             </div>
         </div>
-    </div>
+        <p></p>
+
+        <div class="row">
+            <div class="col-md-4">
+                <p><img src="/images/MuleSoft-partner.png" width="220px"/></p>
+
+                <p><img src="/images/Certified-MuleSoft-Developer.png" width="220px"/></p>
+            </div>
+            <div class="col-md-8">
+                <h2>Integration as a Passion</h2>
+
+                <p>Ricston is a proud strategic partner with Mulesoft, the company which delivers the #1 integration
+                    platform for the Cloud and Enterprise. Many global enterprise customers selected Mule ESB EE as
+                    their integration platform including MasterCard, Nokia, Walmart, DHL and 35% of the Global 500.</p>
+
+                <p>A combination of the best available Mule consultants, years of experience in developing enterprise
+                    solutions using Mule and a close relationship with MuleSoft have shaped Ricston into the leading
+                    services provider for Mule in the industry.</p
+            </div>
+
+        </div>
 </section>
 
 
@@ -448,277 +523,277 @@ layout: false
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <h2 class="subTitle">Our Projects</h2>
-            </div>
-            <nav id="filter" class="col-md-12 text-center">
-                <ul>
-                    <li><a href="" class="btn btn-sm current" data-filter="*">All</a></li>
-                    <li><a href="" class="btn btn-sm" data-filter=".graphics">Telecom</a></li>
-                    <li><a href="" class="btn btn-sm" data-filter=".women">Finance</a></li>
-                    <li><a href="" class="btn btn-sm" data-filter=".cats">Big Data</a></li>
-                </ul>
-            </nav>
+            <!--<div class="row">-->
+            <!--<h2 class="subTitle">Our Projects</h2>-->
+            <!--</div>-->
+            <!--<nav id="filter" class="col-md-12 text-center">-->
+            <!--<ul>-->
+            <!--<li><a href="" class="btn btn-sm current" data-filter="*">All</a></li>-->
+            <!--<li><a href="" class="btn btn-sm" data-filter=".graphics">Telecom</a></li>-->
+            <!--<li><a href="" class="btn btn-sm" data-filter=".women">Finance</a></li>-->
+            <!--<li><a href="" class="btn btn-sm" data-filter=".cats">Big Data</a></li>-->
+            <!--</ul>-->
+            <!--</nav>-->
         </div>
-        <div class="portfolio-items isotopeWrapper clearfix imgHover row" id="3">
+        <!--<div class="portfolio-items isotopeWrapper clearfix imgHover row" id="3">-->
 
-            <article class="col-sm-4 isotopeItem women">
-                <section class="imgWrapper">
-                    <img alt="" src="images/portfolio/vign6.jpg" class="img-responsive">
-                </section>
-                <div class="mediaHover">
-                    <div class="mask"></div>
-                    <div class="iconLinks">
-                        <a href="portfolio-project-fullwidth-image.html" title="link" class="sizer portfolioSheet">
-                            <i class="icon-picture iconRounded iconBig"></i>
-                            <span>link</span>
-                        </a>
-                        <a href="images/portfolio/zoom6.jpg" class="image-link" title="Full width image">
-                            <i class="icon-search iconRounded iconBig"></i>
-                            <span>zoom</span>
-                        </a>
-                    </div>
-                </div>
-                <section class="boxContent">
-                    <h3>Full width image</h3>
+        <!--<article class="col-sm-4 isotopeItem women">-->
+        <!--<section class="imgWrapper">-->
+        <!--<img alt="" src="images/portfolio/vign6.jpg" class="img-responsive">-->
+        <!--</section>-->
+        <!--<div class="mediaHover">-->
+        <!--<div class="mask"></div>-->
+        <!--<div class="iconLinks">-->
+        <!--<a href="portfolio-project-fullwidth-image.html" title="link" class="sizer portfolioSheet">-->
+        <!--<i class="icon-picture iconRounded iconBig"></i>-->
+        <!--<span>link</span>-->
+        <!--</a>-->
+        <!--<a href="images/portfolio/zoom6.jpg" class="image-link" title="Full width image">-->
+        <!--<i class="icon-search iconRounded iconBig"></i>-->
+        <!--<span>zoom</span>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<section class="boxContent">-->
+        <!--<h3>Full width image</h3>-->
 
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus
-                        sollicitudin placerat. <br>
-                        <a href="portfolio-project-fullwidth-image.html" class="moreLink portfolioSheet">&rarr; read
-                            more</a>
-                    </p>
-                </section>
-            </article>
+        <!--<p>-->
+        <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus-->
+        <!--sollicitudin placerat. <br>-->
+        <!--<a href="portfolio-project-fullwidth-image.html" class="moreLink portfolioSheet">&rarr; read-->
+        <!--more</a>-->
+        <!--</p>-->
+        <!--</section>-->
+        <!--</article>-->
 
-            <article class="col-sm-4 isotopeItem cats">
-                <section class="imgWrapper">
-                    <img alt="" src="images/portfolio/vign1.jpg" class="img-responsive">
-                </section>
-                <div class="mediaHover">
-                    <div class="mask"></div>
-                    <div class="iconLinks">
-                        <a href="portfolio-project-fullwidth-video.html" title="link" class="portfolioSheet sizer">
-                            <i class="icon-videocam iconRounded iconBig"></i>
-                            <span>link</span>
-                        </a>
-                        <a href="http://www.youtube.com/watch?v=aqrtF7L86NQ" class="image-iframe"
-                           title="Video Popup">
-                            <i class="icon-search iconRounded iconBig"></i>
-                            <span>video</span>
-                        </a>
-                    </div>
-                </div>
-                <section class="boxContent">
-                    <h3>Video YouTube</h3>
+        <!--<article class="col-sm-4 isotopeItem cats">-->
+        <!--<section class="imgWrapper">-->
+        <!--<img alt="" src="images/portfolio/vign1.jpg" class="img-responsive">-->
+        <!--</section>-->
+        <!--<div class="mediaHover">-->
+        <!--<div class="mask"></div>-->
+        <!--<div class="iconLinks">-->
+        <!--<a href="portfolio-project-fullwidth-video.html" title="link" class="portfolioSheet sizer">-->
+        <!--<i class="icon-videocam iconRounded iconBig"></i>-->
+        <!--<span>link</span>-->
+        <!--</a>-->
+        <!--<a href="http://www.youtube.com/watch?v=aqrtF7L86NQ" class="image-iframe"-->
+        <!--title="Video Popup">-->
+        <!--<i class="icon-search iconRounded iconBig"></i>-->
+        <!--<span>video</span>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<section class="boxContent">-->
+        <!--<h3>Video YouTube</h3>-->
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus
-                        sollicitudin placerat. <br>
-                        <a href="portfolio-project-fullwidth-video.html" class="moreLink portfolioSheet">&rarr; read
-                            more</a>
-                    </p>
-                </section>
-            </article>
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus-->
+        <!--sollicitudin placerat. <br>-->
+        <!--<a href="portfolio-project-fullwidth-video.html" class="moreLink portfolioSheet">&rarr; read-->
+        <!--more</a>-->
+        <!--</p>-->
+        <!--</section>-->
+        <!--</article>-->
 
-            <article class="col-sm-4 isotopeItem graphics">
-                <section class="imgWrapper">
-                    <img alt="" src="images/portfolio/vign7.jpg" class="img-responsive">
-                </section>
-                <div class="mediaHover">
-                    <div class="mask"></div>
-                    <div class="iconLinks">
-                        <a href="portfolio-project-fullwidth-video.html" title="link" class="sizer portfolioSheet">
-                            <i class="icon-videocam iconRounded iconBig"></i>
-                            <span>link</span>
-                        </a>
-                        <a href="http://vimeo.com/ondemand/5335/75660130" class="image-iframe" title="Video Popup">
-                            <i class="icon-search iconRounded iconBig"></i>
-                            <span>video</span>
-                        </a>
-                    </div>
-                </div>
-                <section class="boxContent">
-                    <h3>Video Vimeo</h3>
+        <!--<article class="col-sm-4 isotopeItem graphics">-->
+        <!--<section class="imgWrapper">-->
+        <!--<img alt="" src="images/portfolio/vign7.jpg" class="img-responsive">-->
+        <!--</section>-->
+        <!--<div class="mediaHover">-->
+        <!--<div class="mask"></div>-->
+        <!--<div class="iconLinks">-->
+        <!--<a href="portfolio-project-fullwidth-video.html" title="link" class="sizer portfolioSheet">-->
+        <!--<i class="icon-videocam iconRounded iconBig"></i>-->
+        <!--<span>link</span>-->
+        <!--</a>-->
+        <!--<a href="http://vimeo.com/ondemand/5335/75660130" class="image-iframe" title="Video Popup">-->
+        <!--<i class="icon-search iconRounded iconBig"></i>-->
+        <!--<span>video</span>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<section class="boxContent">-->
+        <!--<h3>Video Vimeo</h3>-->
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus
-                        sollicitudin placerat. <br>
-                        <a href="portfolio-project-fullwidth-video.html" class="moreLink portfolioSheet">&rarr; read
-                            more</a>
-                    </p>
-                </section>
-            </article>
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus-->
+        <!--sollicitudin placerat. <br>-->
+        <!--<a href="portfolio-project-fullwidth-video.html" class="moreLink portfolioSheet">&rarr; read-->
+        <!--more</a>-->
+        <!--</p>-->
+        <!--</section>-->
+        <!--</article>-->
 
-            <article class="col-sm-4 isotopeItem cats">
-                <section class="imgWrapper">
-                    <img alt="" src="images/portfolio/vign3.jpg" class="img-responsive">
-                </section>
-                <div class="mediaHover">
-                    <div class="mask"></div>
-                    <div class="iconLinks">
-                        <a href="portfolio-project-fullwidth-carousel.html" title="link"
-                           class="sizer portfolioSheet">
-                            <i class="icon-camera iconRounded iconBig"></i>
-                            <span>link</span>
-                        </a>
-                        <a href="images/portfolio/carousel-1.jpg" class="image-link" title="Zoom"
-                           data-gallery="images/portfolio/carousel-2.jpg,images/portfolio/carousel-3.jpg">
-                            <i class="icon-search iconRounded iconBig"></i>
-                            <span>gallery</span>
-                        </a>
-                    </div>
-                </div>
-                <section class="boxContent">
-                    <h3>Gallery</h3>
+        <!--<article class="col-sm-4 isotopeItem cats">-->
+        <!--<section class="imgWrapper">-->
+        <!--<img alt="" src="images/portfolio/vign3.jpg" class="img-responsive">-->
+        <!--</section>-->
+        <!--<div class="mediaHover">-->
+        <!--<div class="mask"></div>-->
+        <!--<div class="iconLinks">-->
+        <!--<a href="portfolio-project-fullwidth-carousel.html" title="link"-->
+        <!--class="sizer portfolioSheet">-->
+        <!--<i class="icon-camera iconRounded iconBig"></i>-->
+        <!--<span>link</span>-->
+        <!--</a>-->
+        <!--<a href="images/portfolio/carousel-1.jpg" class="image-link" title="Zoom"-->
+        <!--data-gallery="images/portfolio/carousel-2.jpg,images/portfolio/carousel-3.jpg">-->
+        <!--<i class="icon-search iconRounded iconBig"></i>-->
+        <!--<span>gallery</span>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<section class="boxContent">-->
+        <!--<h3>Gallery</h3>-->
 
-                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus
-                        sollicitudin placerat. <br>
-                        <a href="portfolio-project-fullwidth-carousel.html" class="moreLink portfolioSheet">&rarr;
-                            read more</a>
-                    </p>
-                </section>
-            </article>
-            <article class="col-sm-4 isotopeItem cats">
-                <section class="imgWrapper">
-                    <img alt="" src="images/portfolio/vign2.jpg" class="img-responsive">
-                </section>
-                <div class="mediaHover">
-                    <div class="mask"></div>
-                    <div class="iconLinks">
-                        <a href="portfolio-project-fullwidth-carousel.html" title="link"
-                           class="sizer portfolioSheet"> <i class="icon-picture iconRounded iconBig"></i>
-                            <span>link</span>
-                        </a>
-                        <a href="images/portfolio/zoom2.jpg" class="image-link" title="Gallery Popup">
-                            <i class="icon-search iconRounded iconBig"></i>
-                            <span>zoom</span>
-                        </a>
-                    </div>
-                </div>
-                <section class="boxContent">
-                    <h3>Lorem ipsum dolor sit amet</h3>
+        <!--<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus-->
+        <!--sollicitudin placerat. <br>-->
+        <!--<a href="portfolio-project-fullwidth-carousel.html" class="moreLink portfolioSheet">&rarr;-->
+        <!--read more</a>-->
+        <!--</p>-->
+        <!--</section>-->
+        <!--</article>-->
+        <!--<article class="col-sm-4 isotopeItem cats">-->
+        <!--<section class="imgWrapper">-->
+        <!--<img alt="" src="images/portfolio/vign2.jpg" class="img-responsive">-->
+        <!--</section>-->
+        <!--<div class="mediaHover">-->
+        <!--<div class="mask"></div>-->
+        <!--<div class="iconLinks">-->
+        <!--<a href="portfolio-project-fullwidth-carousel.html" title="link"-->
+        <!--class="sizer portfolioSheet"> <i class="icon-picture iconRounded iconBig"></i>-->
+        <!--<span>link</span>-->
+        <!--</a>-->
+        <!--<a href="images/portfolio/zoom2.jpg" class="image-link" title="Gallery Popup">-->
+        <!--<i class="icon-search iconRounded iconBig"></i>-->
+        <!--<span>zoom</span>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<section class="boxContent">-->
+        <!--<h3>Lorem ipsum dolor sit amet</h3>-->
 
-                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus
-                        sollicitudin placerat. <br>
-                        <a href="portfolio-project-fullwidth-carousel.html" class="moreLink portfolioSheet">&rarr;
-                            read more</a>
-                    </p>
-                </section>
-            </article>
+        <!--<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus-->
+        <!--sollicitudin placerat. <br>-->
+        <!--<a href="portfolio-project-fullwidth-carousel.html" class="moreLink portfolioSheet">&rarr;-->
+        <!--read more</a>-->
+        <!--</p>-->
+        <!--</section>-->
+        <!--</article>-->
 
-            <article class="col-sm-4 isotopeItem women">
-                <section class="imgWrapper">
-                    <img alt="" src="images/portfolio/vign4.jpg" class="img-responsive">
-                </section>
-                <div class="mediaHover">
-                    <div class="mask"></div>
-                    <div class="iconLinks">
-                        <a href="portfolio-project-fullwidth-image.html" title="link" class="sizer portfolioSheet">
-                            <i class="icon-picture iconRounded iconBig"></i>
-                            <span>link</span>
-                        </a>
-                        <a href="images/portfolio/zoom4.jpg" class="image-link" title="Zoom">
-                            <i class="icon-search iconRounded iconBig"></i>
-                            <span>zoom</span>
-                        </a>
-                    </div>
-                </div>
-                <section class="boxContent">
-                    <h3>Lorem ipsum dolor sit amet</h3>
+        <!--<article class="col-sm-4 isotopeItem women">-->
+        <!--<section class="imgWrapper">-->
+        <!--<img alt="" src="images/portfolio/vign4.jpg" class="img-responsive">-->
+        <!--</section>-->
+        <!--<div class="mediaHover">-->
+        <!--<div class="mask"></div>-->
+        <!--<div class="iconLinks">-->
+        <!--<a href="portfolio-project-fullwidth-image.html" title="link" class="sizer portfolioSheet">-->
+        <!--<i class="icon-picture iconRounded iconBig"></i>-->
+        <!--<span>link</span>-->
+        <!--</a>-->
+        <!--<a href="images/portfolio/zoom4.jpg" class="image-link" title="Zoom">-->
+        <!--<i class="icon-search iconRounded iconBig"></i>-->
+        <!--<span>zoom</span>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<section class="boxContent">-->
+        <!--<h3>Lorem ipsum dolor sit amet</h3>-->
 
-                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus
-                        sollicitudin placerat. <br>
-                        <a href="portfolio-project-fullwidth-image.html" class="moreLink portfolioSheet">&rarr; read
-                            more</a>
-                    </p>
-                </section>
-            </article>
+        <!--<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus-->
+        <!--sollicitudin placerat. <br>-->
+        <!--<a href="portfolio-project-fullwidth-image.html" class="moreLink portfolioSheet">&rarr; read-->
+        <!--more</a>-->
+        <!--</p>-->
+        <!--</section>-->
+        <!--</article>-->
 
 
-            <article class="col-sm-4 isotopeItem graphics">
-                <section class="imgWrapper">
-                    <img alt="" src="images/portfolio/vign8.jpg" class="img-responsive">
-                </section>
-                <div class="mediaHover">
-                    <div class="mask"></div>
-                    <div class="iconLinks">
-                        <a href="portfolio-project-fullwidth-image.html" title="link" class="sizer portfolioSheet">
-                            <i class="icon-picture iconRounded iconBig"></i>
-                            <span>link</span>
-                        </a>
-                        <a href="images/portfolio/zoom8.jpg" class="image-link" title="Zoom">
-                            <i class="icon-search iconRounded iconBig"></i>
-                            <span>zoom</span>
-                        </a>
-                    </div>
-                </div>
-                <section class="boxContent">
-                    <h3>Lorem ipsum dolor sit amet</h3>
+        <!--<article class="col-sm-4 isotopeItem graphics">-->
+        <!--<section class="imgWrapper">-->
+        <!--<img alt="" src="images/portfolio/vign8.jpg" class="img-responsive">-->
+        <!--</section>-->
+        <!--<div class="mediaHover">-->
+        <!--<div class="mask"></div>-->
+        <!--<div class="iconLinks">-->
+        <!--<a href="portfolio-project-fullwidth-image.html" title="link" class="sizer portfolioSheet">-->
+        <!--<i class="icon-picture iconRounded iconBig"></i>-->
+        <!--<span>link</span>-->
+        <!--</a>-->
+        <!--<a href="images/portfolio/zoom8.jpg" class="image-link" title="Zoom">-->
+        <!--<i class="icon-search iconRounded iconBig"></i>-->
+        <!--<span>zoom</span>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<section class="boxContent">-->
+        <!--<h3>Lorem ipsum dolor sit amet</h3>-->
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus
-                        sollicitudin placerat.<br>
-                        <a href="portfolio-project-fullwidth-image.html" class="moreLink portfolioSheet">&rarr; read
-                            more</a>
-                    </p>
-                </section>
-            </article>
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus-->
+        <!--sollicitudin placerat.<br>-->
+        <!--<a href="portfolio-project-fullwidth-image.html" class="moreLink portfolioSheet">&rarr; read-->
+        <!--more</a>-->
+        <!--</p>-->
+        <!--</section>-->
+        <!--</article>-->
 
-            <article class="col-sm-4 isotopeItem women">
-                <section class="imgWrapper">
-                    <img alt="" src="images/portfolio/vign5.jpg" class="img-responsive">
-                </section>
-                <div class="mediaHover">
-                    <div class="mask"></div>
-                    <div class="iconLinks">
-                        <a href="portfolio-project-fullwidth-image.html" title="link" class="sizer portfolioSheet">
-                            <i class="icon-picture iconRounded iconBig"></i>
-                            <span>link</span>
-                        </a>
-                        <a href="images/portfolio/zoom5.jpg" class="image-link" title="Zoom">
-                            <i class="icon-search iconRounded iconBig"></i>
-                            <span>zoom</span>
-                        </a>
-                    </div>
-                </div>
-                <section class="boxContent">
-                    <h3>Lorem ipsum dolor sit amet</h3>
+        <!--<article class="col-sm-4 isotopeItem women">-->
+        <!--<section class="imgWrapper">-->
+        <!--<img alt="" src="images/portfolio/vign5.jpg" class="img-responsive">-->
+        <!--</section>-->
+        <!--<div class="mediaHover">-->
+        <!--<div class="mask"></div>-->
+        <!--<div class="iconLinks">-->
+        <!--<a href="portfolio-project-fullwidth-image.html" title="link" class="sizer portfolioSheet">-->
+        <!--<i class="icon-picture iconRounded iconBig"></i>-->
+        <!--<span>link</span>-->
+        <!--</a>-->
+        <!--<a href="images/portfolio/zoom5.jpg" class="image-link" title="Zoom">-->
+        <!--<i class="icon-search iconRounded iconBig"></i>-->
+        <!--<span>zoom</span>-->
+        <!--</a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<section class="boxContent">-->
+        <!--<h3>Lorem ipsum dolor sit amet</h3>-->
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus
-                        sollicitudin placerat.<br>
-                        <a href="portfolio-project-fullwidth-image.html" class="moreLink portfolioSheet">&rarr; read
-                            more</a>
-                    </p>
-                </section>
-            </article>
+        <!--<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus-->
+        <!--sollicitudin placerat.<br>-->
+        <!--<a href="portfolio-project-fullwidth-image.html" class="moreLink portfolioSheet">&rarr; read-->
+        <!--more</a>-->
+        <!--</p>-->
+        <!--</section>-->
+        <!--</article>-->
 
-            <article class="col-sm-4 isotopeItem graphics">
-                <section class="imgWrapper">
-                    <img alt="" src="images/portfolio/vign9.jpg" class="img-responsive">
-                </section>
-                <div class="mediaHover">
-                    <div class="mask"></div>
-                    <div class="iconLinks">
-                        <a href="portfolio-project-fullwidth-carousel.html" title="link"
-                           class="sizer portfolioSheet">
-                            <i class="icon-camera iconRounded iconBig"></i>
-                            <span>link</span>
-                        </a>
-                        <a href="images/portfolio/zoom9.jpg" class="image-link" title="Zoom">
-                            <i class="icon-search iconRounded iconBig"></i>
-                            <span>zoom</span>
-                        </a></div>
-                </div>
-                <section class="boxContent">
-                    <h3>Lorem ipsum dolor sit amet</h3>
+        <!--<article class="col-sm-4 isotopeItem graphics">-->
+        <!--<section class="imgWrapper">-->
+        <!--<img alt="" src="images/portfolio/vign9.jpg" class="img-responsive">-->
+        <!--</section>-->
+        <!--<div class="mediaHover">-->
+        <!--<div class="mask"></div>-->
+        <!--<div class="iconLinks">-->
+        <!--<a href="portfolio-project-fullwidth-carousel.html" title="link"-->
+        <!--class="sizer portfolioSheet">-->
+        <!--<i class="icon-camera iconRounded iconBig"></i>-->
+        <!--<span>link</span>-->
+        <!--</a>-->
+        <!--<a href="images/portfolio/zoom9.jpg" class="image-link" title="Zoom">-->
+        <!--<i class="icon-search iconRounded iconBig"></i>-->
+        <!--<span>zoom</span>-->
+        <!--</a></div>-->
+        <!--</div>-->
+        <!--<section class="boxContent">-->
+        <!--<h3>Lorem ipsum dolor sit amet</h3>-->
 
-                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus
-                        sollicitudin placerat. <br>
-                        <a href="portfolio-project-fullwidth-carousel.html" class="moreLink portfolioSheet">&rarr;
-                            read more</a>
-                    </p>
-                </section>
-            </article>
+        <!--<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate nunc ut tellus-->
+        <!--sollicitudin placerat. <br>-->
+        <!--<a href="portfolio-project-fullwidth-carousel.html" class="moreLink portfolioSheet">&rarr;-->
+        <!--read more</a>-->
+        <!--</p>-->
+        <!--</section>-->
+        <!--</article>-->
 
-        </div>
+        <!--</div>-->
     </div>
 </section>
 
@@ -910,32 +985,32 @@ layout: false
 ================================================== -->
 
 <script type="text/javascript" src="/js/respond/respond.min.js"></script>
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
 <!-- third party plugins  -->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.3.0/jquery.flexslider-min.js"></script>
-
-<script type="text/javascript" src="/js/isotope/jquery.isotope.min.js"></script>
-<script type="text/javascript" src="/js/isotope/jquery.isotope.sloppy-masonry.min.js"></script>
-<script type="text/javascript" src="/js/neko-contact-ajax-plugin/js/jquery.form.js"></script>
-<script type="text/javascript" src="/js/neko-contact-ajax-plugin/js/jquery.validate.min.js"></script>
 <script type="text/javascript"
-        src="http://ashley-bootstrap3-website-template.little-neko.com/v1.6.1/files/js-plugin/magnific-popup/jquery.magnific-popup.min.js"></script>
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.3.0/jquery.flexslider-min.js"></script>
+
+<!--<script type="text/javascript" src="/js/isotope/jquery.isotope.min.js"></script>-->
+<!--<script type="text/javascript" src="/js/isotope/jquery.isotope.sloppy-masonry.min.js"></script>-->
+<!--<script type="text/javascript" src="/js/neko-contact-ajax-plugin/js/jquery.form.js"></script>-->
+<!--<script type="text/javascript" src="/js/neko-contact-ajax-plugin/js/jquery.validate.min.js"></script>-->
+<!--<script type="text/javascript"-->
+        <!--src="http://ashley-bootstrap3-website-template.little-neko.com/v1.6.1/files/js-plugin/magnific-popup/jquery.magnific-popup.min.js"></script>-->
 <!--<script type="text/javascript" src="/js/parallax/jquery.scrollTo-1.4.3.1-min.js"></script>-->
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/1.4.0/jquery.localScroll.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/stellar.js/0.6.2/jquery.stellar.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-localScroll/1.4.0/jquery.localScroll.min.js"></script>
+<!--<script type="text/javascript"-->
+        <!--src="https://cdnjs.cloudflare.com/ajax/libs/stellar.js/0.6.2/jquery.stellar.min.js"></script>-->
 <!-- <script type="text/javascript" src="/js/smoothscroll/SmoothScroll.js"></script> -->
 <script type="text/javascript"
         src="http://ashley-bootstrap3-website-template.little-neko.com/v1.6.1/files/js-plugin/pageSlide/jquery.pageslide-custom.js"></script>
-<script type="text/javascript"
-        src="http://ashley-bootstrap3-website-template.little-neko.com/v1.6.1/files/js-plugin/jquery.sharrre-1.3.4/jquery.sharrre-1.3.4.min.js"></script>
+<!--<script type="text/javascript"-->
+        <!--src="http://ashley-bootstrap3-website-template.little-neko.com/v1.6.1/files/js-plugin/jquery.sharrre-1.3.4/jquery.sharrre-1.3.4.min.js"></script>-->
 
-<script type="text/javascript" src="/js/owl.carousel/owl.carousel.min-MODIFIED.js"></script>
+<!--<script type="text/javascript" src="/js/owl.carousel/owl.carousel.min-MODIFIED.js"></script>-->
 
 <!-- Custom  -->
 <script type="text/javascript" src="js/custom.js"></script>

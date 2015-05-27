@@ -1,3 +1,15 @@
+title: "Mean - Mongo Express Angular Node"
+date: 2015-05-25 14:00:43
+tags:
+- mean
+- mongo
+- express
+- angular
+- node
+- richard.donovan
+---
+
+
 ```
 $ npm install -g mean-cli
 $ mean init <myApp>
@@ -25,19 +37,13 @@ Why so similar? Mean.js is a fork of Mean.io and both initiatives were started b
 Now... main (or little) differences you can see right now are:
 
 
-SCAFFOLDING AND BOILERPLATE GENERATION
+## Comparison
 
-Mean.io uses a custom cli tool named 'mean' (very original name)
-Mean.js uses Yeoman Generators
-
-
-MODULARITY
-
-Mean.io uses a more self-contained node packages modularity with client and server files inside the modules.
-Mean.js uses modules just in the front-end (for angular), and connects them with Express. Although they're working on vertical modules as well...
+| Feature | Mean.io | Mean.Js |
+|:------- |:--------|:------- |
+| SCAFFOLDING AND BOILERPLATE GENERATION | Mean.io uses a custom cli tool named 'mean' (very original name)  | Mean.js uses Yeoman Generators
+| MODULARITY |  uses a more self-contained node packages modularity with client and server files inside the modules. | Mean.js uses modules just in the front-end (for angular), and connects them with Express. Although they're working on vertical modules as well...|
+| DOCUMENTATION | Mean.io has ok docs | Mean.js has AWESOME docs |
 
 
-DOCUMENTATION
 
-Mean.io has ok docs
-Mean.js has AWESOME docs

@@ -1,6 +1,13 @@
-title:
-date:
----
+<script type="application/javascript">
+        // set the menu header to active
+        $(function() {
+             $('.active').attr("class", "");
+             $('li#people').attr("class","active");
+        });
+</script>
+
+
+
 # Ricston
 Founded by Peter Deila in Malta
 

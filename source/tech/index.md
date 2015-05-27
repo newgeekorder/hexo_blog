@@ -1,4 +1,22 @@
+<script type="application/javascript">
+        // set the menu header to active
+        $(function() {
+             $('.active').attr("class", "");
+             $('li#works').attr("class","active");
+        });
+</script>
+
+[Mule Integration](/tech/#Mule_Integration) - [Open Source](/tech/#Open_Source)
+
 ## Mule Integration
+Mule ESB is a lightweight Java-based enterprise service bus (ESB) and integration platform that allows developers to connect applications together quickly and easily, enabling them to exchange data. Mule ESB enables easy integration of existing systems, regardless of the different technologies that the applications use, including JMS, Web Services, JDBC, HTTP, and more.
+
+The key advantage of an ESB is that it allows different applications to communicate with each other by acting as a transit system for carrying data between applications within your enterprise or across the Internet. Mule ESB includes powerful capabilities that include:
+
+    Service creation and hosting — expose and host reusable services, using Mule ESB as a lightweight service container
+    Service mediation — shield services from message formats and protocols, separate business logic from messaging, and enable location-independent service calls
+    Message routing — route, filter, aggregate, and re-sequence messages based on content and rules
+    Data transformation — exchange data across varying formats and transport protocols
 
 ## Open Source
 
@@ -17,3 +35,12 @@
 ## Micro Services
 
 ## Apis
+
+***
+
+### Tech Pages
+<small>
+    [scala](/tech/scala.html) - [java](/tech/java.html) - [c#](/tech/c#.html) - [java](/tech/java.html) - [php](/tech/php.html) - [javascript](/tech/javascript.html) - [jquery](/tech/jquery.html) - [iphone](/tech/iphone.html) - [.net](/tech/.net.html) - [asp.net](/tech/asp.net.html) - [c++](/tech/c++.html) - [python](/tech/python.html) - [mysql](/tech/mysql.html) - [android](/tech/android.html) - [html](/tech/html.html) - [sql](/tech/sql.html) - [objective-c](/tech/objective-c.html) - [ruby-on-rails](/tech/ruby-on-rails.html) - [c](/tech/c.html) - [css](/tech/css.html) - [asp.net-mvc](/tech/asp.net-mvc.html) - [wpf](/tech/wpf.html) - [sql-server](/tech/sql-server.html) - [ruby](/tech/ruby.html) - [xml](/tech/xml.html) - [database](/tech/database.html) - [ajax](/tech/ajax.html) - [windows](/tech/windows.html) - [regex](/tech/regex.html) - [django](/tech/django.html) - [vb.net](/tech/vb.net.html) - [silverlight](/tech/silverlight.html) - [visual-studio](/tech/visual-studio.html) - [winforms](/tech/winforms.html) - [arrays](/tech/arrays.html) - [visual-studio-2010](/tech/visual-studio-2010.html) - [multithreading](/tech/multithreading.html) - [linux](/tech/linux.html) - [cocoa](/tech/cocoa.html) - [performance](/tech/performance.html) - [string](/tech/string.html) - [flex](/tech/flex.html) - [algorithm](/tech/algorithm.html) - [wcf](/tech/wcf.html) - [eclipse](/tech/eclipse.html) - [linq](/tech/linq.html) - [flash](/tech/flash.html) - [cocoa-touch](/tech/cocoa-touch.html) - [actionscript-3](/tech/actionscript-3.html) - [osx](/tech/osx.html) - [xcode](/tech/xcode.html) - [web-services](/tech/web-services.html) - [ipad](/tech/ipad.html) - [sql-server-2005](/tech/sql-server-2005.html) - [oop](/tech/oop.html) - [visual-studio-2008](/tech/visual-studio-2008.html)  - [json](/tech/json.html) - [forms](/tech/forms.html) - [unit-testing](/tech/unit-testing.html) - [perl](/tech/perl.html) - [hibernate](/tech/hibernate.html) - [asp.net-mvc-2](/tech/asp.net-mvc-2.html) - [delphi](/tech/delphi.html) - [oracle](/tech/oracle.html) - [facebook](/tech/facebook.html) - [tsql](/tech/tsql.html) - [nhibernate](/tech/nhibernate.html) - [validation](/tech/validation.html) - [sql-server-2008](/tech/sql-server-2008.html) - [entity-framework](/tech/entity-framework.html) - [git](/tech/git.html) - [google-app-engine](/tech/google-app-engine.html) - [svn](/tech/svn.html) - [wordpress](/tech/wordpress.html) - [spring](/tech/spring.html) - [drupal](/tech/drupal.html) - [apache](/tech/apache.html) - [swing](/tech/swing.html) - [events](/tech/events.html) - [debugging](/tech/debugging.html) - [templates](/tech/templates.html) - [class](/tech/class.html) - [excel](/tech/excel.html) - [sqlite](/tech/sqlite.html) - [parsing](/tech/parsing.html) - [api](/tech/api.html) - [jquery-ui](/tech/jquery-ui.html) - [sockets](/tech/sockets.html) - [matlab](/tech/matlab.html) - [design-patterns](/tech/design-patterns.html) - [caching](/tech/caching.html) - [http](/tech/http.html) - [email](/tech/email.html) - [visual-c++](/tech/visual-c++.html) - [exception](/tech/exception.html) - [ms-access](/tech/ms-access.html) - [postgresql](/tech/postgresql.html) - [list](/tech/list.html) - [generics](/tech/generics.html) - [xslt](/tech/xslt.html) - [design](/tech/design.html) - [database-design](/tech/database-design.html) - [sharepoint](/tech/sharepoint.html) - [bash](/tech/bash.html) - [angularjs](/tech/angularjs.html) - [twitter-bootstrap](/tech/twitter-bootstrap.html) - [mongodb](/tech/mongodb.html) - [cordova](/tech/cordova.html) - [docker](/tech/docker.html) - [oracle](/tech/oracle.html) - [postgresql](/tech/postgresql.html) - [r](/tech/r.html) - [julia-lang](/tech/julia-lang.html) - [redhat](/tech/redhat.html) - [centos](/tech/centos.html) - [coreos](/tech/coreos.html) - [node.js](/tech/node.js.html) - [lua](/tech/lua.html) - [maven](/tech/maven.html) - [groovy](/tech/groovy.html) - [gradle](/tech/gradle.html) - [salesforce](/tech/salesforce.html) - [google-compute-engine](/tech/google-compute-engine.html) - [nginx](/tech/nginx.html) - [grails](/tech/grails.html) - [magento](/tech/magento.html) - [soapui](/tech/soapui.html) - [automated-tests](/tech/automated-tests.html) - [activemq](/tech/activemq.html)
+</small>
+
+

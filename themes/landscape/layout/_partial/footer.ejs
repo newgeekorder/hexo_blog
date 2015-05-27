@@ -1,11 +1,24 @@
 <footer id="footer">
-  <% if (theme.sidebar === 'bottom'){ %>
+    <% if (theme.sidebar === 'bottom'){ %>
     <%- partial('_partial/sidebar') %>
-  <% } %>
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    <% } %>
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            <div class="row">
+                <div class="col-md-4">
+                    &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
+                    Powered by <a href="https://nodejs.org/">Nodejs</a> and <a href="http://hexo.io/"
+                                                                               target="_blank">Hexo</a>
+                </div>
+                <div class="col-md-6 right text-right">
+                    <h2>
+                        <a href="https://www.linkedin.com/company/ricston-ltd" target="_blank"><i class="fa fa-linkedin"></i></a> &nbsp
+                    <a href="https://www.facebook.com/ricston" target="_blank"><i class="fa fa-facebook"></i></a> &nbsp
+                    <a href="https://twitter.com/ricston"><i class="fa fa-twitter"></i></a> &nbsp
+                    <a href="https://www.facebook.com/ricston"><i class="fa fa-google-plus"></i></a> &nbsp
+                    <a href="#"><i class="fa fa-rss"></i></a></h2>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </footer>

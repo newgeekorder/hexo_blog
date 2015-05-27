@@ -19,5 +19,8 @@
     "hexo-renderer-stylus": "^0.2.0",
     "hexo-server": "^0.1.2",
     "hexo-tag-bootstrap": "0.0.8"
+  },
+  "devDependencies": {
+    "babel-core": "^5.4.7"
   }
 }

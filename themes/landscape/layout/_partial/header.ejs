@@ -13,46 +13,99 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse" id="scrollTarget">
                 <ul class="nav navbar-nav pull-right">
                     <li class="active"><a href="/"><i class="fa fa-home"></i>Home</a></li>
-                    <li class=""><a href="/#services"><i class="fa fa-thumbs-up"></i>Services</a></li>
-                    <!--<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"-->
-                           <!--aria-expanded="false"><span class="caret"></span></a>-->
-                        <!--<ul class="dropdown-menu" role="menu">-->
-                            <!--<li class="customMenu"><a href="#">Mule Integration</a></li>-->
-                            <!--<li class="customMenu"><a href="#">Open Source</a></li>-->
-                            <!--<li class="customMenu"><a href="#">Java</a></li>-->
-                            <!--<li class="customMenu"><a href="#">Migration</a></li>-->
-                            <!--<li class="customMenu"><a href="#">DevOps</a></li>-->
-                            <!--<li class="customMenu"><a href="#">Testing</a></li>-->
-                            <!--<li class="customMenu"><a href="#">Db Design</a></li>-->
-                            <!--<li class="customMenu"><a href="#">Big Data</a></li>-->
-                            <!--<li class="customMenu"><a href="#">Micro Services</a></li>-->
-                            <!--<li class="customMenu"><a href="#">Apis</a></li>-->
-                        <!--</ul>-->
+                    <li id="services"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"  aria-expanded="false">
+                            <i class="fa fa-thumbs-up"></i>Services</a>
+                        <!--<span class="caret"></span>-->
+                        <!--</a>-->
+                        <ul class="dropdown-menu right" role="menu">
+                            <li class="customMenu"><a href="/#services">Our Services</a></li>
+                            <li class="customMenu"><a href="/tech/#Mule">Mule Integration</a></li>
+                            <li class="customMenu"><a href="/tech/#Open Source">Open Source</a></li>
+                            <li class="customMenu"><a href="/tech/java.html">Java</a></li>
+                            <li class="customMenu"><a href="/tech/#Migration">Migration</a></li>
+                            <li class="customMenu"><a href="/tech/#DevOps">Dev Ops</a></li>
+                            <li class="customMenu"><a href="/tech/#Testing">Testing</a></li>
+                            <li class="customMenu"><a href="/tech/#Db Design">DB Design</a></li>
+                            <li class="customMenu"><a href="/tech/#Big Data">Big Data</a></li>
+                            <li class="customMenu"><a href="/tech/#Micro Services">Micro Services</a></li>
+                            <li class="customMenu"><a href="/tech/#Apis">Apis</a></li>
+                        </ul></li>
                     <li><a href="/#about"><i class="fa fa-question"></i>About Us</a></li>
-                    <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                    <li id="industries"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                            aria-expanded="false"><i
-                                    class="fa fa-paperclip"></i>Industries </a>
-                        <!--<ul class="dropdown-menu" role="menu">-->
-                            <!--<li class="customMenu"><a href="#">Telecoms & Media</a></li>-->
-                            <!--<li class="customMenu"><a href="#">Retail</a></li>-->
-                            <!--<li class="customMenu"><a href="#">Finance</a></li>-->
-                            <!--<li class="customMenu"><a href="#">Govenment</a></li>-->
-                        <!--</ul>-->
+                                    class="fa fa-paperclip"></i>Industries</a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="customMenu"><a href="/industries/">Industries</a></li>
+                            <li class="customMenu"><a href="/industries/#Media_&_Telecom">Telecoms & Media</a></li>
+                            <li class="customMenu"><a href="/industries/#Retail">Retail</a></li>
+                            <li class="customMenu"><a href="/industries/#Finance">Finance</a></li>
+                            <li class="customMenu"><a href="/industries/#Government">Government</a></li>
+                        </ul>
                     </li>
-                    <li><a href="/blog"><i class="fa fa-align-justify"></i>Works</a></li>
-                    <li><a href="/#team"><i class="fa fa-users"></i>Our Team</a></li>
+                    <li id="works"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-expanded="false"><i class="fa fa-align-justify"></i>Works</a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="customMenu"><a href="/#Works">Projects</a></li>
+                            <li class="customMenu"><a href="/presentations">Presentations</a></li>
+                            <li class="customMenu"><a href="/blog">Tech Blog</a></li>
+                            <li class="customMenu"><a href="http://ricston.com/blog">Mule Blog</a></li>
+                            <li class="customMenu"><a href="/wiki/index.html">Wiki</a></li>
+                        </ul>
+                    </li>
+                    <li id="people"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                       aria-expanded="false"><i class="fa fa-users"></i>Our Team</a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li class="customMenu"><a href="/#team">Our Team</a></li>
+                            <li class="customMenu"><a href="/careers">Careers</a></li>
+                        </ul>
+                    </li>
                     <li><a href="/#contactSlice"><i class="fa fa-mail-reply"></i>Contact</a></li>
                 </ul>
             </div>
         </nav>
     </div>
 </header>
-<!-- header variables ->
- <%- page.path %>
- <%- page.title %>
- <%- path %>
- <%- page.source %>
- <%- page.full_source  %>
- <%- page.link  %>
+<!-- header variables -->
+ <!--<%- page.path %>-->
+ <!--<%- page.title %>-->
+ <!--<%- path %>-->
+ <!--<%- page.source %>-->
+ <!--<%- page.full_source  %>-->
+ <!--<%- page.link  %>-->
+
+
+<script type="application/javascript">
+    $(document).ready(function(){
+//        alert ("got updated page   " );
+        if ( document.location.pathname.startsWith("/tech")){
+            $('.active').attr("class", "");
+            $('li#works').attr("class","active");
+        } else  if ( document.location.pathname.startsWith("/services") ){
+            $('.active').attr("class", "");
+            $('li#services').attr("class","active");
+        }  else  if ( document.location.pathname.startsWith("/caseStudies")) {
+            $('.active').attr("class", "");
+            $('li#services').attr("class", "active");
+        }  else  if ( document.location.pathname.startsWith("/careers")) {
+            $('.active').attr("class", "");
+            $('li#people').attr("class", "active");
+        } else  if ( document.location.pathname.startsWith("/industries")) {
+            $('.active').attr("class", "");
+            $('li#industries').attr("class", "active");
+        } else  if ( document.location.pathname.startsWith("/blog")) {
+            $('.active').attr("class", "");
+            $('li#works').attr("class", "active");
+        }  else  if ( document.location.pathname.startsWith("/people")) {
+            $('.active').attr("class", "");
+            $('li#people').attr("class", "active");
+        } else  if ( document.location.pathname.startsWith("/wiki")) {
+            $('.active').attr("class", "");
+            $('li#works').attr("class", "active");
+        } else  if ( document.location.pathname.startsWith("/presentations")) {
+            $('.active').attr("class", "");
+            $('li#works').attr("class", "active");
+        }
+    });
+</script>
 
 <!-- header -->
